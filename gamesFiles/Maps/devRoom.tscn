@@ -1,6 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assets/Tiles/test1.png" type="Texture" id=1]
+[ext_resource path="res://Blueprints/GameControllers/HUDController.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Blueprints/Player/player.tscn" type="PackedScene" id=3]
+
+
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 192, 64, 0, 64, 0, 0, 192, 0 )
@@ -107,3 +111,8 @@ tile_set = SubResource( 1 )
 cell_size = Vector2( 32, 32 )
 format = 1
 tile_data = PoolIntArray( 65536, 3, 0, 65566, 3, 0, 458752, 3, 0, 458782, 3, 0, 851968, 3, 0, 851998, 3, 0, 1114114, 0, 0, 1114116, 0, 0, 1114118, 0, 0, 1114120, 0, 0, 1114122, 0, 0, 1114124, 0, 0, 1114126, 0, 0, 1114128, 0, 0, 1114130, 0, 0, 1114132, 0, 0, 1114136, 0, 0 )
+
+[node name="gameController" parent="." instance=ExtResource( 2 )]
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 506.428, 515.418 )

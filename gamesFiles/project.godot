@@ -17,3 +17,14 @@ _global_script_class_icons={
 
 config/name="kingdomAlike"
 run/main_scene="res://Maps/MainMenu.tscn"
+
+[input]
+
+right={
+"deadzone": 0.5,
+"events": [  ]
+}
+left={
+"deadzone": 0.5,
+"events": [  ]
+}
