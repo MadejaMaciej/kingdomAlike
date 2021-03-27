@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/Portals/portal.png" type="Texture" id=1]
+
+[node name="Portal" type="Sprite"]
+position = Vector2( -0.561222, -0.561234 )
+scale = Vector2( 0.245307, 0.202201 )
+texture = ExtResource( 1 )
