@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="kingdomAlike"
-run/main_scene="res://Maps/level.tscn"
+run/main_scene="res://Maps/MainMenu.tscn"
 
 [input]
 
