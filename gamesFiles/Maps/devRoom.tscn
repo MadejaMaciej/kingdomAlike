@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assets/Tiles/test1.png" type="Texture" id=1]
+[ext_resource path="res://Blueprints/Enemies/Zombies/Zombie1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Blueprints/Player/player.tscn" type="PackedScene" id=3]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
@@ -111,3 +112,6 @@ tile_data = PoolIntArray( 65536, 3, 0, 65566, 3, 0, 458752, 3, 0, 458782, 3, 0, 
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 515.105, 498.066 )
+
+[node name="Zombie1" parent="." instance=ExtResource( 2 )]
+position = Vector2( 164.676, 498.781 )
