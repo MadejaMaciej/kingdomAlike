@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=52 format=2]
 
 [ext_resource path="res://Assets/Tileset/jungleTileset.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Tileset/Tile (2).png" type="Texture" id=2]
@@ -26,8 +26,24 @@
 [ext_resource path="res://Assets/Backgrounds/Layer_0005_5.png" type="Texture" id=24]
 [ext_resource path="res://Assets/Backgrounds/Layer_0007_Lights.png" type="Texture" id=25]
 [ext_resource path="res://Assets/Backgrounds/Layer_0004_Lights.png" type="Texture" id=26]
+[ext_resource path="res://Assets/Backgrounds/TombStone (2).png" type="Texture" id=27]
+[ext_resource path="res://Assets/Backgrounds/TombStone (1).png" type="Texture" id=28]
+[ext_resource path="res://Assets/Backgrounds/Sign.png" type="Texture" id=29]
 [ext_resource path="res://Assets/Backgrounds/Layer_0008_3.png" type="Texture" id=30]
 [ext_resource path="res://Assets/Backgrounds/Layer_0006_4.png" type="Texture" id=31]
+[ext_resource path="res://Assets/Backgrounds/ArrowSign.png" type="Texture" id=32]
+[ext_resource path="res://Assets/Backgrounds/ArrowSign_reverted.png" type="Texture" id=33]
+[ext_resource path="res://Assets/Enviroment/Grass_01.png" type="Texture" id=34]
+[ext_resource path="res://Assets/Enviroment/Grass_02.png" type="Texture" id=35]
+[ext_resource path="res://Assets/Enviroment/Rock_07.png" type="Texture" id=36]
+[ext_resource path="res://Assets/Enviroment/Rock_01.png" type="Texture" id=37]
+[ext_resource path="res://Assets/Enviroment/Rock_06.png" type="Texture" id=38]
+[ext_resource path="res://Assets/Enviroment/Rock_04.png" type="Texture" id=39]
+[ext_resource path="res://Assets/Enviroment/Rock_08.png" type="Texture" id=40]
+[ext_resource path="res://Assets/Enviroment/Rock_05.png" type="Texture" id=41]
+[ext_resource path="res://Assets/Enviroment/Rock_03.png" type="Texture" id=42]
+[ext_resource path="res://Assets/Buildings/Wall_C_02.png" type="Texture" id=43]
+[ext_resource path="res://Assets/Buildings/Wall_C_01.png" type="Texture" id=44]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -366,3 +382,415 @@ texture = ExtResource( 24 )
 position = Vector2( 200.178, 2.08893 )
 scale = Vector2( 1, 1.18547 )
 texture = ExtResource( 13 )
+
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
+scroll_base_offset = Vector2( 0.75, 0.75 )
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_mirroring = Vector2( 1600, 0 )
+
+[node name="Wall_C_02" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( 309.387, 537.493 )
+scale = Vector2( 1, 1.1926 )
+texture = ExtResource( 43 )
+
+[node name="Wall_C_01" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( 338.639, 425.373 )
+rotation = 1.01578
+scale = Vector2( 1, 1.1926 )
+texture = ExtResource( 44 )
+
+[node name="Grass_01" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -881.718, 385.912 )
+scale = Vector2( 0.623394, 0.404052 )
+texture = ExtResource( 34 )
+offset = Vector2( -30.647, -3.38086 )
+
+[node name="Grass_02" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -1239.86, 416.706 )
+scale = Vector2( 0.38862, 0.315826 )
+texture = ExtResource( 34 )
+offset = Vector2( 961.815, -74.2604 )
+
+[node name="Grass_03" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -1316.79, 414.818 )
+scale = Vector2( 0.38862, 0.315826 )
+texture = ExtResource( 34 )
+offset = Vector2( 961.815, -74.2604 )
+
+[node name="Grass_04" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -1279.98, 416.234 )
+scale = Vector2( 0.38862, 0.315826 )
+texture = ExtResource( 34 )
+offset = Vector2( 961.815, -74.2604 )
+
+[node name="Grass_05" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -766.96, 387.101 )
+scale = Vector2( 0.623394, 0.404052 )
+texture = ExtResource( 34 )
+offset = Vector2( -30.647, -3.38086 )
+
+[node name="Grass_06" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -1125.1, 417.895 )
+scale = Vector2( 0.38862, 0.315826 )
+texture = ExtResource( 34 )
+offset = Vector2( 961.815, -74.2604 )
+
+[node name="Grass_07" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -1202.03, 416.007 )
+scale = Vector2( 0.38862, 0.315826 )
+texture = ExtResource( 34 )
+offset = Vector2( 961.815, -74.2604 )
+
+[node name="Grass_08" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -1165.22, 417.423 )
+scale = Vector2( 0.38862, 0.315826 )
+texture = ExtResource( 34 )
+offset = Vector2( 961.815, -74.2604 )
+
+[node name="Grass_09" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -707.499, 385.318 )
+scale = Vector2( 0.623394, 0.404052 )
+texture = ExtResource( 34 )
+offset = Vector2( -30.647, -3.38086 )
+
+[node name="Grass_10" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -1065.64, 416.111 )
+scale = Vector2( 0.38862, 0.315826 )
+texture = ExtResource( 34 )
+offset = Vector2( 961.815, -74.2604 )
+
+[node name="Grass_11" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -1142.57, 414.223 )
+scale = Vector2( 0.38862, 0.315826 )
+texture = ExtResource( 34 )
+offset = Vector2( 961.815, -74.2604 )
+
+[node name="Grass_12" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -1105.76, 415.639 )
+scale = Vector2( 0.38862, 0.315826 )
+texture = ExtResource( 34 )
+offset = Vector2( 961.815, -74.2604 )
+
+[node name="Grass_13" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -599.281, 391.264 )
+scale = Vector2( 0.623394, 0.404052 )
+texture = ExtResource( 34 )
+offset = Vector2( -30.647, -3.38086 )
+
+[node name="Grass_14" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -957.426, 422.057 )
+scale = Vector2( 0.38862, 0.315826 )
+texture = ExtResource( 34 )
+offset = Vector2( 961.815, -74.2604 )
+
+[node name="Grass_15" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -1034.35, 420.169 )
+scale = Vector2( 0.38862, 0.315826 )
+texture = ExtResource( 34 )
+offset = Vector2( 961.815, -74.2604 )
+
+[node name="Grass_16" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -997.541, 421.585 )
+scale = Vector2( 0.38862, 0.315826 )
+texture = ExtResource( 34 )
+offset = Vector2( 961.815, -74.2604 )
+
+[node name="Grass_17" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -516.632, 388.885 )
+scale = Vector2( 0.623394, 0.404052 )
+texture = ExtResource( 34 )
+offset = Vector2( -30.647, -3.38086 )
+
+[node name="Grass_18" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -874.776, 419.679 )
+scale = Vector2( 0.38862, 0.315826 )
+texture = ExtResource( 34 )
+offset = Vector2( 961.815, -74.2604 )
+
+[node name="Grass_19" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -951.702, 417.791 )
+scale = Vector2( 0.38862, 0.315826 )
+texture = ExtResource( 34 )
+offset = Vector2( 961.815, -74.2604 )
+
+[node name="Grass_20" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -914.891, 419.207 )
+scale = Vector2( 0.38862, 0.315826 )
+texture = ExtResource( 34 )
+offset = Vector2( 961.815, -74.2604 )
+
+[node name="Grass_21" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -415.136, 386.709 )
+scale = Vector2( 0.623394, 0.404052 )
+texture = ExtResource( 34 )
+offset = Vector2( -30.647, -3.38086 )
+
+[node name="Grass_22" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -773.281, 417.503 )
+scale = Vector2( 0.38862, 0.315826 )
+texture = ExtResource( 34 )
+offset = Vector2( 961.815, -74.2604 )
+
+[node name="Grass_23" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -850.206, 415.615 )
+scale = Vector2( 0.38862, 0.315826 )
+texture = ExtResource( 34 )
+offset = Vector2( 961.815, -74.2604 )
+
+[node name="Grass_24" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -813.395, 417.031 )
+scale = Vector2( 0.38862, 0.315826 )
+texture = ExtResource( 34 )
+offset = Vector2( 961.815, -74.2604 )
+
+[node name="Grass_25" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -311.706, 384.187 )
+scale = Vector2( 0.623394, 0.404052 )
+texture = ExtResource( 34 )
+offset = Vector2( -30.647, -3.38086 )
+
+[node name="Grass_26" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -669.851, 414.98 )
+scale = Vector2( 0.38862, 0.315826 )
+texture = ExtResource( 34 )
+offset = Vector2( 961.815, -74.2604 )
+
+[node name="Grass_27" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -746.776, 413.093 )
+scale = Vector2( 0.38862, 0.315826 )
+texture = ExtResource( 34 )
+offset = Vector2( 961.815, -74.2604 )
+
+[node name="Grass_28" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -709.965, 414.508 )
+scale = Vector2( 0.38862, 0.315826 )
+texture = ExtResource( 34 )
+offset = Vector2( 961.815, -74.2604 )
+
+[node name="Grass_29" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -210.798, 386.709 )
+scale = Vector2( 0.623394, 0.404052 )
+texture = ExtResource( 34 )
+offset = Vector2( -30.647, -3.38086 )
+
+[node name="Grass_30" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -568.943, 417.503 )
+scale = Vector2( 0.38862, 0.315826 )
+texture = ExtResource( 34 )
+offset = Vector2( 961.815, -74.2604 )
+
+[node name="Grass_31" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -645.869, 415.615 )
+scale = Vector2( 0.38862, 0.315826 )
+texture = ExtResource( 34 )
+offset = Vector2( 961.815, -74.2604 )
+
+[node name="Grass_32" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -609.058, 417.031 )
+scale = Vector2( 0.38862, 0.315826 )
+texture = ExtResource( 34 )
+offset = Vector2( 961.815, -74.2604 )
+
+[node name="Grass_33" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -142.686, 389.232 )
+scale = Vector2( 0.623394, 0.404052 )
+texture = ExtResource( 34 )
+offset = Vector2( -30.647, -3.38086 )
+
+[node name="Grass_34" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -500.83, 420.026 )
+scale = Vector2( 0.38862, 0.315826 )
+texture = ExtResource( 34 )
+offset = Vector2( 961.815, -74.2604 )
+
+[node name="Grass_35" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -577.756, 418.138 )
+scale = Vector2( 0.38862, 0.315826 )
+texture = ExtResource( 34 )
+offset = Vector2( 961.815, -74.2604 )
+
+[node name="Grass_36" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -540.945, 419.554 )
+scale = Vector2( 0.38862, 0.315826 )
+texture = ExtResource( 34 )
+offset = Vector2( 961.815, -74.2604 )
+
+[node name="Grass_37" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -69.5275, 385.869 )
+scale = Vector2( 0.623394, 0.404052 )
+texture = ExtResource( 34 )
+offset = Vector2( -30.647, -3.38086 )
+
+[node name="Grass_38" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -427.672, 416.662 )
+scale = Vector2( 0.38862, 0.315826 )
+texture = ExtResource( 34 )
+offset = Vector2( 961.815, -74.2604 )
+
+[node name="Grass_39" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -504.598, 414.774 )
+scale = Vector2( 0.38862, 0.315826 )
+texture = ExtResource( 34 )
+offset = Vector2( 961.815, -74.2604 )
+
+[node name="Grass_40" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -467.787, 416.19 )
+scale = Vector2( 0.38862, 0.315826 )
+texture = ExtResource( 34 )
+offset = Vector2( 961.815, -74.2604 )
+
+[node name="Grass_41" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -24.5663, 390.605 )
+scale = Vector2( 0.457109, 0.422307 )
+texture = ExtResource( 35 )
+
+[node name="Grass_44" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( 8.61967, 387.265 )
+scale = Vector2( 0.474509, 0.51279 )
+texture = ExtResource( 35 )
+
+[node name="Grass_45" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -971.38, 386.395 )
+scale = Vector2( 0.474509, 0.51279 )
+texture = ExtResource( 35 )
+
+[node name="Grass_46" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( -1003.41, 391.826 )
+scale = Vector2( 0.360381, 0.378176 )
+texture = ExtResource( 35 )
+
+[node name="Grass_42" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( 13.9651, 393.055 )
+scale = Vector2( 0.314426, 0.276145 )
+texture = ExtResource( 35 )
+
+[node name="Grass_43" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( 56.9509, 388.155 )
+scale = Vector2( 0.443188, 0.429269 )
+texture = ExtResource( 35 )
+
+[node name="Rock_08" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( 226.459, 387.898 )
+texture = ExtResource( 38 )
+
+[node name="Rock_05" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( 201.446, 383.651 )
+texture = ExtResource( 41 )
+
+[node name="Rock_04" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( 151.421, 390.534 )
+texture = ExtResource( 39 )
+
+[node name="Rock_12" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( 531.183, 375.184 )
+texture = ExtResource( 39 )
+
+[node name="Rock_11" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( 494.475, 389.867 )
+texture = ExtResource( 39 )
+
+[node name="Rock_01" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( 111.052, 405.326 )
+scale = Vector2( 0.602545, 0.510572 )
+texture = ExtResource( 37 )
+
+[node name="Rock_06" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( 204.75, 403 )
+texture = ExtResource( 42 )
+
+[node name="Rock_03" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( 143.162, 404.888 )
+scale = Vector2( 0.546498, 0.601803 )
+texture = ExtResource( 42 )
+
+[node name="Rock_07" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( 519.722, 402.19 )
+texture = ExtResource( 41 )
+
+[node name="Rock_09" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( 550.026, 392.779 )
+scale = Vector2( 1.05214, 1.146 )
+texture = ExtResource( 36 )
+
+[node name="Rock_10" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( 491.787, 399.714 )
+scale = Vector2( 0.927001, 0.791431 )
+texture = ExtResource( 40 )
+
+[node name="Rock_02" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( 338.782, 406.564 )
+texture = ExtResource( 37 )
+
+[node name="Grass_47" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( 153.21, 390.322 )
+scale = Vector2( 0.53367, 0.484948 )
+texture = ExtResource( 34 )
+
+[node name="Grass_48" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( 226.709, 393.44 )
+scale = Vector2( 0.457109, 0.415347 )
+texture = ExtResource( 34 )
+
+[node name="Grass_49" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( 288.626, 384.531 )
+scale = Vector2( 0.631112, 0.665913 )
+texture = ExtResource( 34 )
+
+[node name="Grass_50" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( 398.652, 393.886 )
+scale = Vector2( 0.484949, 0.51279 )
+texture = ExtResource( 34 )
+
+[node name="Grass_51" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
+position = Vector2( 520.705, 392.104 )
+scale = Vector2( 0.471029, 0.457108 )
+texture = ExtResource( 34 )
+
+[node name="ArrowSign" type="Sprite" parent="."]
+position = Vector2( -7537.85, 357.255 )
+z_index = -99
+texture = ExtResource( 32 )
+
+[node name="Sign" type="Sprite" parent="."]
+position = Vector2( -8960.04, 370.398 )
+scale = Vector2( 0.648351, 0.655914 )
+z_index = -99
+texture = ExtResource( 29 )
+
+[node name="TombStone (1)" type="Sprite" parent="."]
+position = Vector2( 1656.1, 372.729 )
+z_index = -99
+texture = ExtResource( 28 )
+
+[node name="TombStone (2)" type="Sprite" parent="."]
+position = Vector2( 1734.52, 363.454 )
+z_index = -99
+texture = ExtResource( 27 )
+
+[node name="TombStone (2)2" type="Sprite" parent="."]
+position = Vector2( -18546.9, 361.163 )
+z_index = -99
+texture = ExtResource( 27 )
+
+[node name="TombStone (1)2" type="Sprite" parent="."]
+position = Vector2( -18415.7, 372.935 )
+z_index = -99
+texture = ExtResource( 28 )
+
+[node name="TombStone (2)3" type="Sprite" parent="."]
+position = Vector2( -18676.4, 155.984 )
+rotation = 0.760963
+z_index = -99
+texture = ExtResource( 27 )
+
+[node name="TombStone (2)4" type="Sprite" parent="."]
+position = Vector2( 1815.3, 378.362 )
+z_index = -99
+texture = ExtResource( 27 )
+
+[node name="ArrowSign_reverted" type="Sprite" parent="."]
+position = Vector2( -10206.4, 364.305 )
+z_index = -99
+texture = ExtResource( 33 )
