@@ -26,8 +26,8 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Left"]
-position = Vector2( 69.8548, 33.3755 )
-scale = Vector2( 0.278707, 0.134422 )
+position = Vector2( 39.1789, 16.8577 )
+scale = Vector2( 0.158879, 0.0698994 )
 z_as_relative = false
 texture = ExtResource( 1 )
 
@@ -46,10 +46,11 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Right"]
-position = Vector2( 69.8548, 33.3755 )
-scale = Vector2( 0.278707, 0.134422 )
+position = Vector2( 40.5947, 19.2174 )
+scale = Vector2( 0.16441, 0.0791169 )
 z_as_relative = false
 texture = ExtResource( 2 )
+
 [connection signal="button_down" from="Left" to="." method="_on_Left_button_down"]
 [connection signal="button_up" from="Left" to="." method="_on_Left_button_up"]
 [connection signal="button_down" from="Right" to="." method="_on_Right_button_down"]

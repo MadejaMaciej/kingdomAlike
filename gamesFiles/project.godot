@@ -10,13 +10,17 @@ config_version=4
 
 _global_script_classes=[  ]
 _global_script_class_icons={
-
 }
 
 [application]
 
 config/name="kingdomAlike"
 run/main_scene="res://Maps/MainMenu.tscn"
+
+[display]
+
+window/size/width=600
+window/size/height=300
 
 [input]
 

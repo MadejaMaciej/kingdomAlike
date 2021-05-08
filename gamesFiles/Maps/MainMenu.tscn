@@ -59,5 +59,6 @@ margin_bottom = 2.0
 text = "Quit Game"
 align = 1
 valign = 1
+
 [connection signal="pressed" from="StartGame" to="." method="_on_StartGame_pressed"]
 [connection signal="pressed" from="QuitGame" to="." method="_on_QuitGame_pressed"]
