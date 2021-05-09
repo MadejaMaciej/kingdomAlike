@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scripts/MainMenu/MainMenuScripts.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Backgrounds/Layer_0009_2.png" type="Texture" id=2]
@@ -11,6 +11,9 @@
 [ext_resource path="res://Assets/Backgrounds/Layer_0002_7.png" type="Texture" id=9]
 [ext_resource path="res://Assets/Buildings/Ladder_02.png" type="Texture" id=10]
 [ext_resource path="res://Assets/Tileset/Tile (2).png" type="Texture" id=11]
+[ext_resource path="res://Assets/Buildings/Basket.png" type="Texture" id=12]
+[ext_resource path="res://Assets/ToBlueprints/CivilHousing.png" type="Texture" id=13]
+[ext_resource path="res://Assets/ToBlueprints/tentRight.png" type="Texture" id=14]
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
@@ -18,7 +21,7 @@ anchor_bottom = 1.0
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false,
-"_edit_vertical_guides_": [ 276.545, 300.431, 236.214, 364.054 ]
+"_edit_vertical_guides_": [ -272.083, 300.431, 236.214, 364.054 ]
 }
 
 [node name="Background" type="Node" parent="."]
@@ -60,6 +63,17 @@ position = Vector2( 339.173, -81.0067 )
 scale = Vector2( 1, 1.15221 )
 z_index = -100
 texture = ExtResource( 5 )
+
+[node name="CivilHousing" type="Sprite" parent="Background"]
+position = Vector2( 98.9036, 213.396 )
+scale = Vector2( 0.497291, 0.568463 )
+texture = ExtResource( 13 )
+
+[node name="tentRight" type="Sprite" parent="Background"]
+position = Vector2( 364.069, 229.66 )
+scale = Vector2( 0.490883, 0.462599 )
+z_index = -100
+texture = ExtResource( 14 )
 
 [node name="Ladder_02" type="Sprite" parent="."]
 position = Vector2( 253.31, 141.17 )
@@ -310,6 +324,11 @@ texture = ExtResource( 11 )
 [node name="Tile (2)20" type="Sprite" parent="."]
 position = Vector2( 601.843, 302.118 )
 texture = ExtResource( 11 )
+
+[node name="Basket" type="Sprite" parent="."]
+position = Vector2( 485.099, 264.251 )
+scale = Vector2( 0.35439, 0.333697 )
+texture = ExtResource( 12 )
 
 [connection signal="pressed" from="StartGame" to="." method="_on_StartGame_pressed"]
 [connection signal="pressed" from="QuitGame" to="." method="_on_QuitGame_pressed"]

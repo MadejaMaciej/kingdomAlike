@@ -1,4 +1,4 @@
-[gd_scene load_steps=73 format=2]
+[gd_scene load_steps=75 format=2]
 
 [ext_resource path="res://Assets/Tileset/jungleTileset.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Tileset/Tile (2).png" type="Texture" id=2]
@@ -65,6 +65,8 @@
 [ext_resource path="res://Assets/Buildings/Decor_Bread.png" type="Texture" id=63]
 [ext_resource path="res://Assets/Buildings/Basket.png" type="Texture" id=64]
 [ext_resource path="res://Assets/Buildings/Canopy_04.png" type="Texture" id=65]
+[ext_resource path="res://Blueprints/Constructions/MainHallConstructionn.tscn" type="PackedScene" id=66]
+[ext_resource path="res://Blueprints/Constructions/HomeConstruction.tscn" type="PackedScene" id=67]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -365,7 +367,6 @@ rotation = 3.14159
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 scroll_base_scale = Vector2( 0.5, 0.5 )
-scroll_ignore_camera_zoom = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_mirroring = Vector2( 920, 0 )
@@ -406,7 +407,6 @@ texture = ExtResource( 13 )
 
 [node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
 scroll_base_offset = Vector2( 0.75, 0.75 )
-scroll_ignore_camera_zoom = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2"]
 motion_mirroring = Vector2( 1600, 0 )
@@ -579,7 +579,7 @@ texture = ExtResource( 34 )
 offset = Vector2( 961.815, -74.2604 )
 
 [node name="Grass_27" type="Sprite" parent="ParallaxBackground2/ParallaxLayer"]
-position = Vector2( -746.776, 413.093 )
+position = Vector2( -744.256, 416.873 )
 scale = Vector2( 0.38862, 0.315826 )
 texture = ExtResource( 34 )
 offset = Vector2( 961.815, -74.2604 )
@@ -1004,3 +1004,43 @@ position = Vector2( -8124.32, 292.493 )
 scale = Vector2( 0.445346, 0.356189 )
 z_index = -4
 texture = ExtResource( 49 )
+
+[node name="MainHallPlayer" parent="." instance=ExtResource( 66 )]
+position = Vector2( -2886.18, 392.236 )
+z_index = -2
+
+[node name="MainHallEnemy" parent="." instance=ExtResource( 66 )]
+position = Vector2( -15532.2, 392.324 )
+z_index = -2
+
+[node name="TentEnemy" parent="." instance=ExtResource( 67 )]
+position = Vector2( -14728.6, 393.527 )
+z_index = -2
+
+[node name="TentEnemy2" parent="." instance=ExtResource( 67 )]
+position = Vector2( -14377.5, 391.745 )
+z_index = -2
+
+[node name="TentEnemy3" parent="." instance=ExtResource( 67 )]
+position = Vector2( -14031.9, 393.527 )
+z_index = -2
+
+[node name="TentEnemy4" parent="." instance=ExtResource( 67 )]
+position = Vector2( -13691.5, 393.527 )
+z_index = -2
+
+[node name="TentPlayer" parent="." instance=ExtResource( 67 )]
+position = Vector2( -4733.21, 392.469 )
+z_index = -2
+
+[node name="TentPlayer2" parent="." instance=ExtResource( 67 )]
+position = Vector2( -4382.2, 390.687 )
+z_index = -2
+
+[node name="TentPlayer3" parent="." instance=ExtResource( 67 )]
+position = Vector2( -4036.53, 392.469 )
+z_index = -2
+
+[node name="TentPlayer4" parent="." instance=ExtResource( 67 )]
+position = Vector2( -3696.21, 392.469 )
+z_index = -2
