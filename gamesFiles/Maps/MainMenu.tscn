@@ -1,64 +1,315 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scripts/MainMenu/MainMenuScripts.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Backgrounds/Layer_0009_2.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Backgrounds/Layer_0010_1.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Backgrounds/Layer_0008_3.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Backgrounds/Layer_0005_5.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Backgrounds/Layer_0006_4.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Backgrounds/Layer_0007_Lights.png" type="Texture" id=7]
+[ext_resource path="res://Assets/MainMenuIcons/icon-close.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Backgrounds/Layer_0002_7.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Buildings/Ladder_02.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Tileset/Tile (2).png" type="Texture" id=11]
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": false,
+"_edit_vertical_guides_": [ 276.545, 300.431, 236.214, 364.054 ]
 }
 
-[node name="ColorRect" type="ColorRect" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_right = -2.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Background" type="Node" parent="."]
+
+[node name="Layer_0010_1" type="Sprite" parent="Background"]
+position = Vector2( 336.104, 218.33 )
+z_index = -100
+texture = ExtResource( 3 )
+
+[node name="Layer_0009_2" type="Sprite" parent="Background"]
+position = Vector2( 332.54, -32.0124 )
+z_index = -100
+texture = ExtResource( 2 )
+
+[node name="Layer_0008_3" type="Sprite" parent="Background"]
+position = Vector2( 361.242, -72.9745 )
+scale = Vector2( 1.08106, 1.12881 )
+z_index = -100
+texture = ExtResource( 4 )
+
+[node name="Layer_0007_Lights" type="Sprite" parent="Background"]
+position = Vector2( 273.999, -24.1057 )
+z_index = -100
+texture = ExtResource( 7 )
+
+[node name="Layer_0007_Lights2" type="Sprite" parent="Background"]
+position = Vector2( -63.6512, -27.6693 )
+z_index = -100
+texture = ExtResource( 7 )
+
+[node name="Layer_0006_4" type="Sprite" parent="Background"]
+position = Vector2( 332.799, -78.2731 )
+scale = Vector2( 1, 1.12089 )
+z_index = -100
+texture = ExtResource( 6 )
+
+[node name="Layer_0005_5" type="Sprite" parent="Background"]
+position = Vector2( 339.173, -81.0067 )
+scale = Vector2( 1, 1.15221 )
+z_index = -100
+texture = ExtResource( 5 )
+
+[node name="Ladder_02" type="Sprite" parent="."]
+position = Vector2( 253.31, 141.17 )
+rotation = 1.5708
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 10 )
+
+[node name="Ladder_03" type="Sprite" parent="."]
+position = Vector2( 343.209, 135.177 )
+rotation = -1.5708
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 10 )
 
 [node name="StartGame" type="Button" parent="."]
-anchor_left = 0.2
-anchor_top = 0.4
-anchor_right = 0.412
-anchor_bottom = 0.533
-margin_right = -0.288025
-margin_bottom = 0.199982
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.396
+anchor_top = 0.07
+anchor_right = 0.607
+anchor_bottom = 0.204
+margin_left = -0.128067
+margin_top = 0.0627823
+margin_right = 0.183868
+margin_bottom = -0.0372467
 rect_pivot_offset = Vector2( -656.732, -156.729 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="StartGame"]
-anchor_right = 1.001
-anchor_bottom = 1.0
-margin_right = -0.0168152
-margin_bottom = 2.0
+[node name="Layer_0002_7" type="Sprite" parent="."]
+position = Vector2( 300.777, 51.2974 )
+scale = Vector2( 0.138756, 0.161368 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.397
+anchor_top = 0.073
+anchor_right = 0.605
+anchor_bottom = 0.2
+margin_left = -0.200012
+margin_top = 0.0999985
 text = "Start Game"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="QuitGame" type="Button" parent="."]
-anchor_left = 0.6
-anchor_top = 0.4
-anchor_right = 0.8
-anchor_bottom = 0.533
-margin_right = -0.288025
-margin_bottom = 0.199982
+[node name="LoadGame" type="Button" parent="."]
+anchor_left = 0.393
+anchor_top = 0.511
+anchor_right = 0.604
+anchor_bottom = 0.641
+margin_left = 0.199997
+margin_top = -68.7953
+margin_right = 1.59998
+margin_bottom = -68.7953
 rect_pivot_offset = Vector2( -656.732, -156.729 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="QuitGame"]
-anchor_right = 1.001
-anchor_bottom = 1.0
-margin_right = -0.0168152
-margin_bottom = 2.0
-text = "Quit Game"
+[node name="Layer_0002_8" type="Sprite" parent="."]
+position = Vector2( 300.777, 114.785 )
+scale = Vector2( 0.138756, 0.161368 )
+texture = ExtResource( 9 )
+
+[node name="Label2" type="Label" parent="."]
+anchor_left = 0.397
+anchor_top = 0.289
+anchor_right = 0.604
+anchor_bottom = 0.415
+margin_left = -0.700012
+margin_top = -0.112602
+margin_right = 0.0999756
+margin_bottom = 0.0873947
+text = "Load Game"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LANGame" type="Button" parent="."]
+anchor_left = 0.393
+anchor_top = 0.511
+anchor_right = 0.604
+anchor_bottom = 0.641
+margin_left = -1.13484
+margin_top = -0.0510559
+margin_right = 0.265137
+margin_bottom = -0.0510406
+rect_pivot_offset = Vector2( -259.599, -91.768 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Layer_0002_9" type="Sprite" parent="."]
+position = Vector2( 300.356, 182.057 )
+scale = Vector2( 0.138756, 0.161368 )
+texture = ExtResource( 9 )
+
+[node name="Label3" type="Label" parent="."]
+anchor_left = 0.397
+anchor_top = 0.51
+anchor_right = 0.605
+anchor_bottom = 0.637
+margin_left = -0.200012
+margin_top = -1.52588e-05
+margin_bottom = -0.100006
+text = "LAN Game"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HowToPlay" type="Button" parent="."]
+anchor_left = 0.393
+anchor_top = 0.511
+anchor_right = 0.604
+anchor_bottom = 0.641
+margin_left = -0.341141
+margin_top = 69.0009
+margin_right = 1.05884
+margin_bottom = 69.0009
+rect_pivot_offset = Vector2( -259.599, -91.768 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Layer_0002_10" type="Sprite" parent="."]
+position = Vector2( 300.356, 251.452 )
+scale = Vector2( 0.138756, 0.161368 )
+texture = ExtResource( 9 )
+
+[node name="Label4" type="Label" parent="."]
+anchor_left = 0.396
+anchor_top = 0.743
+anchor_right = 0.604
+anchor_bottom = 0.87
+margin_left = 0.253555
+margin_top = 0.0142059
+margin_right = 0.453552
+margin_bottom = -0.0858154
+text = "How To Play"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuitGame" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.393
+anchor_top = 0.76
+anchor_right = 0.607
+anchor_bottom = 0.89
+margin_left = 313.623
+margin_top = -217.0
+margin_right = 213.223
+margin_bottom = -232.0
+rect_pivot_offset = Vector2( -656.732, -156.729 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 563.08, 22.6915 )
+scale = Vector2( 0.35759, 0.307024 )
+texture = ExtResource( 8 )
+
+[node name="Tile (2)" type="Sprite" parent="."]
+position = Vector2( 15.0793, 301.489 )
+texture = ExtResource( 11 )
+
+[node name="Tile (2)2" type="Sprite" parent="."]
+position = Vector2( 43.5471, 301.489 )
+texture = ExtResource( 11 )
+
+[node name="Tile (2)3" type="Sprite" parent="."]
+position = Vector2( 75.4936, 301.489 )
+texture = ExtResource( 11 )
+
+[node name="Tile (2)4" type="Sprite" parent="."]
+position = Vector2( 107.043, 301.489 )
+texture = ExtResource( 11 )
+
+[node name="Tile (2)5" type="Sprite" parent="."]
+position = Vector2( 138.196, 301.762 )
+texture = ExtResource( 11 )
+
+[node name="Tile (2)6" type="Sprite" parent="."]
+position = Vector2( 169.42, 302.119 )
+texture = ExtResource( 11 )
+
+[node name="Tile (2)7" type="Sprite" parent="."]
+position = Vector2( 197.887, 302.119 )
+texture = ExtResource( 11 )
+
+[node name="Tile (2)8" type="Sprite" parent="."]
+position = Vector2( 229.834, 302.119 )
+texture = ExtResource( 11 )
+
+[node name="Tile (2)9" type="Sprite" parent="."]
+position = Vector2( 261.383, 302.119 )
+texture = ExtResource( 11 )
+
+[node name="Tile (2)10" type="Sprite" parent="."]
+position = Vector2( 292.536, 301.92 )
+texture = ExtResource( 11 )
+
+[node name="Tile (2)11" type="Sprite" parent="."]
+position = Vector2( 324.281, 301.95 )
+texture = ExtResource( 11 )
+
+[node name="Tile (2)12" type="Sprite" parent="."]
+position = Vector2( 352.749, 301.95 )
+texture = ExtResource( 11 )
+
+[node name="Tile (2)13" type="Sprite" parent="."]
+position = Vector2( 384.696, 301.95 )
+texture = ExtResource( 11 )
+
+[node name="Tile (2)14" type="Sprite" parent="."]
+position = Vector2( 416.245, 301.95 )
+texture = ExtResource( 11 )
+
+[node name="Tile (2)15" type="Sprite" parent="."]
+position = Vector2( 447.083, 301.909 )
+texture = ExtResource( 11 )
+
+[node name="Tile (2)16" type="Sprite" parent="."]
+position = Vector2( 478.727, 301.845 )
+texture = ExtResource( 11 )
+
+[node name="Tile (2)17" type="Sprite" parent="."]
+position = Vector2( 507.195, 301.845 )
+texture = ExtResource( 11 )
+
+[node name="Tile (2)18" type="Sprite" parent="."]
+position = Vector2( 539.141, 301.845 )
+texture = ExtResource( 11 )
+
+[node name="Tile (2)19" type="Sprite" parent="."]
+position = Vector2( 570.691, 301.845 )
+texture = ExtResource( 11 )
+
+[node name="Tile (2)20" type="Sprite" parent="."]
+position = Vector2( 601.843, 302.118 )
+texture = ExtResource( 11 )
 
 [connection signal="pressed" from="StartGame" to="." method="_on_StartGame_pressed"]
 [connection signal="pressed" from="QuitGame" to="." method="_on_QuitGame_pressed"]
