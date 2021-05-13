@@ -34,3 +34,13 @@ func _on_Right_button_up():
 	pressed = false
 	direction = null
 	Input.action_release("right")
+
+
+func _on_buyWorker_pressed():
+	var player = get_node("/root/Level/Player")
+	player.buyWorker()
+
+
+func _on_buildBuilding_pressed():
+	var player = get_node("/root/Level/Player")
+	var building = get_node("/root/Level/Player")

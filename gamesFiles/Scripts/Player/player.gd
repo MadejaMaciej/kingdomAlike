@@ -10,10 +10,11 @@ var people
 var maxPeople
 
 var population
+var collidingBuilding
 
 func _ready():
 	screen_size = get_viewport_rect().size
-	money = 10
+	money = 100
 	hp = 100
 	maxHealth = 100
 	people = 0
@@ -29,7 +30,7 @@ func _ready():
 	switchHearts(hp)
 	displayPeople(people, maxPeople)
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	var velocity = Vector2.ZERO
 	if Input.is_action_pressed("right"):
 		velocity.x += 1
@@ -57,8 +58,8 @@ func displayPeople(ppl, maxPpl):
 	var together = part1 + slash + part2
 	$CanvasLayer/HUDController/HUD/PeopleCounter/Label.text = str(together)
 
-func displayMoney(money):
-	$CanvasLayer/HUDController/HUD/coinDisplay/Label.text = str(money)
+func displayMoney(mon):
+	$CanvasLayer/HUDController/HUD/coinDisplay/Label.text = str(mon)
 
 func die():
 	get_tree().quit()
@@ -110,17 +111,19 @@ func heal(amount):
 		switchHearts(hp)
 
 func buyWorker():
-	if(people + 1 <= maxPeople and money - 1 >= 0):
+	if(people + 1 <= maxPeople and money - 1 >= 0 and collidingBuilding.getPeople() > 0):
 		money -= 1
 		people += 1
 		population.worker += 1
 		displayPeople(people, maxPeople)
 		displayMoney(money)
+		collidingBuilding.buyWorker()
 
 func loseWorker(type):
 	if(people - 1 >= 0 and population[type] - 1 >= 0):
 		people -= 1
 		population[type] -= 1
+		displayPeople(people, maxPeople)
 
 func buildedTent():
 	maxPeople += 5
@@ -129,3 +132,26 @@ func buildedTent():
 func buildedHouse():
 	maxPeople += 15
 	displayPeople(people, maxPeople)
+
+func _on_Area2D_area_entered(area):
+	if(area.is_in_group("building")):
+		collidingBuilding = area
+
+func _on_Area2D_area_exited(area):
+	if(area.is_in_group("building")):
+		collidingBuilding = null
+
+func switchWorkerTo(to):
+	if(money - 1 >= 0 and population.worker - 1  >= 0):
+		population.worker -= 1
+		switcherPop(to)
+
+func switcherPop(to):
+	if(to == "archer" ): 
+		population.archer += 1
+	elif(to == "pike"):
+		population.pike += 1
+	elif(to == "sword"):
+		population.sword += 1
+	else:
+		population.engineer += 1

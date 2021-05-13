@@ -773,13 +773,13 @@ texture = ExtResource( 34 )
 
 [node name="ArrowSign" type="Sprite" parent="graphicHolder"]
 position = Vector2( -7537.85, 357.255 )
-z_index = -99
+z_index = -3
 texture = ExtResource( 32 )
 
 [node name="Sign" type="Sprite" parent="graphicHolder"]
 position = Vector2( -8960.04, 370.398 )
 scale = Vector2( 0.648351, 0.655914 )
-z_index = -1
+z_index = -3
 texture = ExtResource( 29 )
 
 [node name="TombStone (1)" type="Sprite" parent="graphicHolder"]
@@ -815,20 +815,20 @@ texture = ExtResource( 27 )
 
 [node name="ArrowSign_reverted" type="Sprite" parent="graphicHolder"]
 position = Vector2( -10206.4, 364.305 )
-z_index = -99
+z_index = -3
 texture = ExtResource( 33 )
 
 [node name="TraderNode" parent="graphicHolder" instance=ExtResource( 45 )]
 position = Vector2( -9166.87, 276.706 )
-z_index = -2
+z_index = -3
 
 [node name="TraderNode2" parent="graphicHolder" instance=ExtResource( 46 )]
 position = Vector2( -8611.41, 275.449 )
-z_index = -2
+z_index = -3
 
 [node name="Area2D" parent="graphicHolder" instance=ExtResource( 47 )]
 position = Vector2( -8854.92, 341.778 )
-z_index = -2
+z_index = -3
 
 [node name="Decor_Chest" type="Sprite" parent="graphicHolder"]
 position = Vector2( -7708.82, 345.517 )
@@ -839,22 +839,22 @@ texture = ExtResource( 51 )
 [node name="Decor_Cart" type="Sprite" parent="graphicHolder"]
 position = Vector2( -7655.84, 337.949 )
 scale = Vector2( 0.592691, 0.487579 )
-z_index = -2
+z_index = -3
 texture = ExtResource( 50 )
 
 [node name="Decor_Cart2" type="Sprite" parent="graphicHolder"]
 position = Vector2( -9662.07, 331.207 )
 rotation = 0.6353
 scale = Vector2( 0.592691, 0.487579 )
-z_index = -1
+z_index = -3
 texture = ExtResource( 50 )
 
 [node name="Area2D3" parent="graphicHolder" instance=ExtResource( 48 )]
-position = Vector2( -7954.44, 271.884 )
+position = Vector2( -7952.88, 401.666 )
 z_index = -2
 
 [node name="Area2D2" parent="graphicHolder" instance=ExtResource( 48 )]
-position = Vector2( -8294.34, 272.479 )
+position = Vector2( -8292.79, 402.261 )
 z_index = -2
 
 [node name="Herbs" type="Sprite" parent="graphicHolder"]
@@ -866,7 +866,7 @@ texture = ExtResource( 49 )
 [node name="Pot" type="Sprite" parent="graphicHolder"]
 position = Vector2( -7711.19, 336.328 )
 scale = Vector2( 0.313592, 0.289817 )
-z_index = -1
+z_index = -3
 texture = ExtResource( 52 )
 
 [node name="Wooden_Barrel" type="Sprite" parent="graphicHolder"]
@@ -876,11 +876,11 @@ z_index = -3
 texture = ExtResource( 53 )
 
 [node name="Area2D4" parent="graphicHolder" instance=ExtResource( 48 )]
-position = Vector2( -9981.33, 271.724 )
+position = Vector2( -9979.78, 401.506 )
 z_index = -2
 
 [node name="Area2D5" parent="graphicHolder" instance=ExtResource( 48 )]
-position = Vector2( -9503.51, 272.783 )
+position = Vector2( -9501.96, 402.565 )
 z_index = -2
 
 [node name="Ladder_02" type="Sprite" parent="graphicHolder/Area2D5"]
@@ -893,86 +893,93 @@ texture = ExtResource( 54 )
 [node name="Wooden_Crate" type="Sprite" parent="graphicHolder"]
 position = Vector2( -9787.24, 370.2 )
 scale = Vector2( 0.484375, 0.484375 )
-z_index = -2
+z_index = -3
 texture = ExtResource( 56 )
 
 [node name="Wooden_Crate2" type="Sprite" parent="graphicHolder"]
 position = Vector2( -9731.74, 370.2 )
 scale = Vector2( 0.484375, 0.484375 )
-z_index = -2
+z_index = -3
 texture = ExtResource( 56 )
 
 [node name="Wooden_Crate3" type="Sprite" parent="graphicHolder"]
 position = Vector2( -9760.24, 313.2 )
 scale = Vector2( 0.484375, 0.484375 )
-z_index = -2
+z_index = -3
 texture = ExtResource( 56 )
 
 [node name="Sign_03" type="Sprite" parent="graphicHolder"]
 position = Vector2( -7422.83, 311.744 )
 scale = Vector2( 0.435126, 0.364518 )
+z_index = -2
 texture = ExtResource( 61 )
 
 [node name="Sign_02" type="Sprite" parent="graphicHolder"]
 position = Vector2( -9649.77, 299.034 )
 scale = Vector2( 0.435126, 0.364518 )
-z_index = -2
+z_index = -3
 texture = ExtResource( 57 )
 
 [node name="Goods_03" type="Sprite" parent="graphicHolder"]
 position = Vector2( -9654.1, 295.607 )
 scale = Vector2( 0.270687, 0.201001 )
+z_index = -3
 texture = ExtResource( 55 )
 
 [node name="Pillar_02" type="Sprite" parent="graphicHolder"]
 position = Vector2( -7423.97, 366.485 )
 scale = Vector2( 0.4, 0.4 )
-z_index = -2
+z_index = -3
 texture = ExtResource( 58 )
 
 [node name="Pillar_01" type="Sprite" parent="graphicHolder"]
 position = Vector2( -7421.5, 298.284 )
 scale = Vector2( 0.3, 0.5 )
-z_index = -2
+z_index = -3
 texture = ExtResource( 59 )
 
 [node name="Decor_Sword" type="Sprite" parent="graphicHolder"]
 position = Vector2( -7429.46, 308.881 )
 rotation = -0.760963
 scale = Vector2( 0.162891, 0.200098 )
+z_index = -2
 texture = ExtResource( 60 )
 
 [node name="Decor_Shield" type="Sprite" parent="graphicHolder"]
 position = Vector2( -7416.7, 313.467 )
 scale = Vector2( 0.252807, 0.249705 )
+z_index = -2
 texture = ExtResource( 62 )
 
 [node name="Sign_04" type="Sprite" parent="graphicHolder"]
 position = Vector2( -10274.5, 284.88 )
 scale = Vector2( 0.435126, 0.364518 )
+z_index = -2
 texture = ExtResource( 61 )
 
 [node name="Pillar_03" type="Sprite" parent="graphicHolder"]
 position = Vector2( -10275.6, 339.621 )
 scale = Vector2( 0.4, 0.4 )
-z_index = -2
+z_index = -3
 texture = ExtResource( 58 )
 
 [node name="Pillar_04" type="Sprite" parent="graphicHolder"]
 position = Vector2( -10273.2, 271.421 )
 scale = Vector2( 0.3, 0.5 )
-z_index = -2
+z_index = -3
 texture = ExtResource( 59 )
 
 [node name="Decor_Sword2" type="Sprite" parent="graphicHolder"]
 position = Vector2( -10267.8, 282.613 )
 rotation = 0.750492
 scale = Vector2( 0.162891, 0.200098 )
+z_index = -2
 texture = ExtResource( 60 )
 
 [node name="Decor_Shield2" type="Sprite" parent="graphicHolder"]
 position = Vector2( -10280.3, 286.207 )
 scale = Vector2( 0.252807, 0.249705 )
+z_index = -2
 texture = ExtResource( 62 )
 
 [node name="Canopy_04" type="Sprite" parent="graphicHolder"]
@@ -1002,7 +1009,7 @@ texture = ExtResource( 64 )
 [node name="Herbs2" type="Sprite" parent="graphicHolder"]
 position = Vector2( -8124.32, 292.493 )
 scale = Vector2( 0.445346, 0.356189 )
-z_index = -4
+z_index = -3
 texture = ExtResource( 49 )
 
 [node name="MainHallPlayer" parent="." instance=ExtResource( 66 )]

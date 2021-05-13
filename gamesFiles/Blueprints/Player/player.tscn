@@ -55,14 +55,14 @@ animations = [ {
 "name": "Idle_left",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 38 ), ExtResource( 41 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 35 ), ExtResource( 40 ), ExtResource( 42 ), ExtResource( 39 ) ],
-"loop": true,
-"name": "Run_left",
-"speed": 10.0
-}, {
 "frames": [ ExtResource( 22 ), ExtResource( 19 ), ExtResource( 16 ), ExtResource( 15 ), ExtResource( 17 ), ExtResource( 21 ), ExtResource( 20 ), ExtResource( 18 ) ],
 "loop": true,
 "name": "Run_right",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 38 ), ExtResource( 41 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 35 ), ExtResource( 40 ), ExtResource( 42 ), ExtResource( 39 ) ],
+"loop": true,
+"name": "Run_left",
 "speed": 10.0
 } ]
 
@@ -87,6 +87,14 @@ position = Vector2( 0.267303, 0.122983 )
 scale = Vector2( 2.12, 2.12 )
 shape = SubResource( 2 )
 
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2( 1, 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 0.267303, 0.122983 )
+scale = Vector2( 2.12, 2.12 )
+shape = SubResource( 2 )
+
 [node name="ViewPort" type="Camera2D" parent="."]
 position = Vector2( 0, -10 )
 scale = Vector2( 0.5, 0.5 )
@@ -95,3 +103,6 @@ current = true
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="HUDController" parent="CanvasLayer" instance=ExtResource( 3 )]
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_Area2D_area_exited"]
