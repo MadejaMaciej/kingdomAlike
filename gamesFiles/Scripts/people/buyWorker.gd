@@ -44,6 +44,6 @@ func buyWorker():
 	if(people > 0):
 		people -= 1
 		prepareBuyLabel(people)
-		var zombieScene = preload("res://Blueprints/Enemies/Zombies/Zombie1.tscn")
-		var instance = zombieScene.instance()
-		add_child(instance)
+		#var workerScene = preload("res://Blueprints/Enemies/Zombies/Zombie1.tscn")
+		#var workerInstance = workerScene.instance()
+		#add_child(workerInstance)

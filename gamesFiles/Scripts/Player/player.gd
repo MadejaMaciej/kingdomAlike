@@ -11,6 +11,8 @@ var maxPeople
 
 var population
 var collidingBuilding
+var playerBuilding
+var hallBuilded
 
 func _ready():
 	screen_size = get_viewport_rect().size
@@ -19,6 +21,7 @@ func _ready():
 	maxHealth = 100
 	people = 0
 	maxPeople = 20
+	hallBuilded = false
 	population = {
 		"worker": 0,
 		"archer": 0,
@@ -129,6 +132,9 @@ func buildedTent():
 	maxPeople += 5
 	displayPeople(people, maxPeople)
 
+func getPlayerBuilding():
+	return playerBuilding
+
 func buildedHouse():
 	maxPeople += 15
 	displayPeople(people, maxPeople)
@@ -136,10 +142,14 @@ func buildedHouse():
 func _on_Area2D_area_entered(area):
 	if(area.is_in_group("building")):
 		collidingBuilding = area
+	if(area.is_in_group("playerBuilding")):
+		playerBuilding = area
 
 func _on_Area2D_area_exited(area):
 	if(area.is_in_group("building")):
 		collidingBuilding = null
+	if(area.is_in_group("playerBuilding")):
+		playerBuilding = null
 
 func switchWorkerTo(to):
 	if(money - 1 >= 0 and population.worker - 1  >= 0):

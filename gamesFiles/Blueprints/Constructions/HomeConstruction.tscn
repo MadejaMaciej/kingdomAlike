@@ -12,19 +12,25 @@ extents = Vector2( 80.3724, 37.2882 )
 script = ExtResource( 4 )
 
 [node name="Trade_Tent_01" type="Sprite" parent="Sprite" index="0"]
-position = Vector2( -1.2126, -6.90736 )
+position = Vector2( -4.65585, -16.7074 )
 scale = Vector2( 0.619982, 0.1 )
 texture = ExtResource( 3 )
 
 [node name="Pillar_01" type="Sprite" parent="Sprite" index="1"]
-position = Vector2( -0.20929, -0.617065 )
+position = Vector2( -1.00388, -10.4171 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" parent="." index="1"]
-position = Vector2( 0.5, -35.992 )
+position = Vector2( -0.422104, -38.5966 )
 disabled = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." index="2"]
-position = Vector2( 0, -29.2601 )
+position = Vector2( -0.794586, -38.5609 )
 shape = SubResource( 1 )
+
+[node name="BuildTime" type="Timer" parent="." index="3"]
+wait_time = 5.0
+one_shot = true
+
+[connection signal="timeout" from="BuildTime" to="." method="_on_BuildTime_timeout"]

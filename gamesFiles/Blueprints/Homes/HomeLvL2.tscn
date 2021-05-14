@@ -3,3 +3,4 @@
 [ext_resource path="res://Blueprints/Buildings/housingBuy.tscn" type="PackedScene" id=1]
 
 [node name="Area2D" instance=ExtResource( 1 )]
+script = null

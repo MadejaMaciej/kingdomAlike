@@ -43,4 +43,13 @@ func _on_buyWorker_pressed():
 
 func _on_buildBuilding_pressed():
 	var player = get_node("/root/Level/Player")
-	var building = get_node("/root/Level/Player")
+	if(player.population.worker > 0):
+		var building = player.getPlayerBuilding()
+		if(building.is_in_group("lvl1")):
+			if(player.money > 2):
+				player.loseMoney(3)
+				building.runTimer()
+		else:
+			if(player.money > 0):
+				player.loseMoney(1)
+				building.runTimer()
