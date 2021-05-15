@@ -1,11 +1,13 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/Buildings/Trade_Tent_02.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Buildings/Trade_Tent_01.png" type="Texture" id=2]
 [ext_resource path="res://Blueprints/Buildings/ConstructionBase.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/Buildings/Basket.png" type="Texture" id=4]
+[ext_resource path="res://Scripts/Buildings/HomeLvL1.gd" type="Script" id=5]
 
 [node name="Area2D" instance=ExtResource( 3 )]
+script = ExtResource( 5 )
 
 [node name="Trade_Tent_01" type="Sprite" parent="Sprite" index="0"]
 position = Vector2( -61.7038, -63.1604 )

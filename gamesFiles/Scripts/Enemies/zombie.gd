@@ -12,7 +12,7 @@ func _ready():
 	velocity.x = 1
 	x = velocity.x
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	velocity = x * speed
 	velocity = move_and_slide(Vector2(velocity, 0))
 	if x < 0:

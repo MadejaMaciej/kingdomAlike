@@ -1,0 +1,147 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Assets/Buildings/Wall_C_02.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Buildings/Wall_C_01.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Buildings/Ladder_01.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Buildings/Pillar_01.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Buildings/Street_Lantern.png" type="Texture" id=5]
+[ext_resource path="res://Scripts/Buildings/HallLvL2.gd" type="Script" id=9]
+[ext_resource path="res://Assets/Buildings/Wall_C_03.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Buildings/Wide_Door_04.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Buildings/Decor_Roof_02.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Buildings/Window_03.png" type="Texture" id=17]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 162.977, 114.387 )
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource( 9 )
+
+[node name="Sprite" type="Sprite" parent="."]
+
+[node name="Wall_C_02" type="Sprite" parent="Sprite"]
+position = Vector2( -165.446, -47.6648 )
+scale = Vector2( 0.482234, 0.348423 )
+texture = ExtResource( 1 )
+
+[node name="Wall_C_03" type="Sprite" parent="Sprite"]
+position = Vector2( 128.224, -46.4977 )
+scale = Vector2( 0.482234, 0.351051 )
+texture = ExtResource( 1 )
+
+[node name="Wall_C_01" type="Sprite" parent="Sprite/Wall_C_03"]
+position = Vector2( -831.171, -3.16949 )
+texture = ExtResource( 2 )
+
+[node name="Wall_C_03" type="Sprite" parent="Sprite/Wall_C_03"]
+position = Vector2( 218.902, 0 )
+texture = ExtResource( 11 )
+
+[node name="Pillar_01" type="Sprite" parent="Sprite"]
+position = Vector2( 0.507874, 0.0146942 )
+scale = Vector2( 1, 0.5 )
+texture = ExtResource( 4 )
+
+[node name="Wall_A_01" type="Sprite" parent="Sprite"]
+position = Vector2( -156.715, -82.4229 )
+scale = Vector2( 0.898307, 0.467067 )
+texture = ExtResource( 2 )
+
+[node name="Wall_A_03" type="Sprite" parent="Sprite/Wall_A_01"]
+position = Vector2( 350.77, 4.97746 )
+scale = Vector2( 0.643818, 0.988335 )
+texture = ExtResource( 11 )
+
+[node name="Wall_A_02" type="Sprite" parent="Sprite/Wall_A_01"]
+position = Vector2( 176.71, 0 )
+scale = Vector2( 1.05798, 0.996112 )
+texture = ExtResource( 1 )
+
+[node name="Ladder_02" type="Sprite" parent="Sprite/Wall_A_01/Wall_A_02"]
+position = Vector2( -143.893, -203.292 )
+rotation = 1.5708
+scale = Vector2( 0.326629, 0.745829 )
+texture = ExtResource( 3 )
+
+[node name="Ladder_03" type="Sprite" parent="Sprite/Wall_A_01/Wall_A_02"]
+position = Vector2( -99.4226, -194.865 )
+rotation = 1.5708
+scale = Vector2( 0.326629, 0.745829 )
+texture = ExtResource( 3 )
+
+[node name="Ladder_04" type="Sprite" parent="Sprite/Wall_A_01/Wall_A_02"]
+position = Vector2( -49.2138, -191.353 )
+rotation = 1.5708
+scale = Vector2( 0.326629, 0.745829 )
+texture = ExtResource( 3 )
+
+[node name="Ladder_05" type="Sprite" parent="Sprite/Wall_A_01/Wall_A_02"]
+position = Vector2( -1.87401, -203.292 )
+rotation = 1.5708
+scale = Vector2( 0.326629, 0.745829 )
+texture = ExtResource( 3 )
+
+[node name="Ladder_06" type="Sprite" parent="Sprite/Wall_A_01/Wall_A_02"]
+position = Vector2( 46.9003, -197.674 )
+rotation = 1.5708
+scale = Vector2( 0.326629, 0.745829 )
+texture = ExtResource( 3 )
+
+[node name="Ladder_08" type="Sprite" parent="Sprite/Wall_A_01/Wall_A_02"]
+position = Vector2( 134.407, -197.674 )
+rotation = 1.5708
+scale = Vector2( 0.326629, 0.745829 )
+texture = ExtResource( 3 )
+
+[node name="Ladder_07" type="Sprite" parent="Sprite/Wall_A_01/Wall_A_02"]
+position = Vector2( 97.1091, -211.719 )
+rotation = 1.5708
+scale = Vector2( 0.326629, 0.745829 )
+texture = ExtResource( 3 )
+
+[node name="Ladder_09" type="Sprite" parent="Sprite/Wall_A_01/Wall_A_02"]
+position = Vector2( 174.574, -225.062 )
+rotation = 1.5708
+scale = Vector2( 0.326629, 0.745829 )
+texture = ExtResource( 3 )
+
+[node name="Ladder_01" type="Sprite" parent="Sprite/Wall_A_01/Wall_A_02"]
+position = Vector2( 2.50029, -198.91 )
+scale = Vector2( 1, 1.93089 )
+texture = ExtResource( 3 )
+
+[node name="Wide_Door_04" type="Sprite" parent="Sprite"]
+position = Vector2( 0.834446, -47.2207 )
+scale = Vector2( 0.324566, 0.303751 )
+texture = ExtResource( 12 )
+
+[node name="Decor_Roof_02" type="Sprite" parent="Sprite"]
+position = Vector2( 193.397, -99.8942 )
+scale = Vector2( 0.452924, 0.374798 )
+texture = ExtResource( 13 )
+
+[node name="Window_03" type="Sprite" parent="Sprite"]
+position = Vector2( -99.6826, -100.744 )
+scale = Vector2( 0.477958, 0.438174 )
+texture = ExtResource( 17 )
+
+[node name="Window_04" type="Sprite" parent="Sprite"]
+position = Vector2( 98.769, -102.426 )
+scale = Vector2( 0.477958, 0.438174 )
+texture = ExtResource( 17 )
+
+[node name="Street_Lantern" type="Sprite" parent="Sprite"]
+position = Vector2( 94.154, -73.4757 )
+scale = Vector2( 0.403305, 0.340978 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 2.02097, -106.02 )
+shape = SubResource( 1 )
+
+[node name="GenMoney" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_Area2D_body_entered"]
+[connection signal="timeout" from="GenMoney" to="." method="_on_GenMoney_timeout"]

@@ -3,11 +3,13 @@ extends Area2D
 var buildButton
 var player
 var timerRunning
+var buildingCost
 
 func _ready():
 	timerRunning = false
 	buildButton = get_node("/root/Level/Player/CanvasLayer/HUDController/HUD/buildBuilding")
 	player = get_node("/root/Level/Player")
+	buildingCost = 1
 
 func showUI():
 	buildButton.show()
@@ -33,23 +35,27 @@ func _on_BuildTime_timeout():
 	if($".".is_in_group("playerBuilding")):
 		timerRunning = false
 		switchBuildings()
-		$CollisionShape2D.disabled = true
 
 func switchBuildings():
 	if($".".is_in_group("tent")):
 		player.buildedTent()
 		var tent = preload("res://Blueprints/Homes/HomeLvL1.tscn")
 		var instance = tent.instance()
-		add_child(instance)
+		get_node('/root/Level').add_child(instance)
+		instance.set_global_position(position)
 		instance.add_to_group("playerBuilding")
 		instance.add_to_group("lvl1")
 		instance.add_to_group("home")
-	elif($".".is_in_group("home")):
-		player.buildedHouse()
-		var home = preload("res://Blueprints/Homes/HomeLvL2.tscn")
-		var instance = home.instance()
-		add_child(instance)
-		instance.add_to_group("lvl2")
-		instance.add_to_group("homeReady")
+		instance.z_index = -2
+		$".".queue_free()
 	elif($".".is_in_group("hall")):
 		player.hallBuilded = true
+		var hall = preload("res://Blueprints/Hall/HallLvL1.tscn")
+		var instance = hall.instance()
+		get_node('/root/Level').add_child(instance)
+		instance.set_global_position(position)
+		instance.add_to_group("playerBuilding")
+		instance.add_to_group("lvl1")
+		instance.add_to_group("hall")
+		instance.z_index = -2
+		$".".queue_free()

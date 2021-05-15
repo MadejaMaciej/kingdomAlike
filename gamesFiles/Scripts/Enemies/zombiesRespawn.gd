@@ -12,4 +12,4 @@ func _ready():
 func respawnZombie():
 	var zombieScene = preload("res://Blueprints/Enemies/Zombies/Zombie1.tscn")
 	instance = zombieScene.instance()
-	add_child(instance)
+	get_node("/root/Level").add_child(instance)
