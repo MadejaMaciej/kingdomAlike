@@ -59,3 +59,10 @@ func switchBuildings():
 		instance.add_to_group("hall")
 		instance.z_index = -2
 		$".".queue_free()
+	elif($".".is_in_group("well")):
+		var well = preload("res://Blueprints/Well/well.tscn")
+		var instance = well.instance()
+		get_node('/root/Level').add_child(instance)
+		instance.set_global_position(position)
+		instance.z_index = -2
+		$".".queue_free()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=2]
+[gd_scene load_steps=76 format=2]
 
 [ext_resource path="res://Assets/Tileset/jungleTileset.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Tileset/Tile (2).png" type="Texture" id=2]
@@ -67,6 +67,7 @@
 [ext_resource path="res://Assets/Buildings/Canopy_04.png" type="Texture" id=65]
 [ext_resource path="res://Blueprints/Constructions/MainHallConstruction.tscn" type="PackedScene" id=66]
 [ext_resource path="res://Blueprints/Constructions/HomeConstruction.tscn" type="PackedScene" id=67]
+[ext_resource path="res://Blueprints/Constructions/WellConstruction.tscn" type="PackedScene" id=68]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -227,7 +228,6 @@ tile_data = PoolIntArray( 131211, 2, 0, 131212, 2, 0, 131213, 2, 0, 131214, 2, 0
 
 [node name="Player" parent="." instance=ExtResource( 8 )]
 position = Vector2( -7424.58, 370.727 )
-speed = 800
 
 [node name="Rocks" type="Node" parent="."]
 
@@ -1066,4 +1066,15 @@ z_index = -2
 "tent",
 ] instance=ExtResource( 67 )]
 position = Vector2( -3556.01, 403.858 )
+z_index = -2
+
+[node name="WellPlayer" parent="." groups=[
+"playerBuilding",
+"well",
+] instance=ExtResource( 68 )]
+position = Vector2( -3216.02, 402.158 )
+z_index = -2
+
+[node name="WellEnemy" parent="." instance=ExtResource( 68 )]
+position = Vector2( -15200.6, 402.349 )
 z_index = -2

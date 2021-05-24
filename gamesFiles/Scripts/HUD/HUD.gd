@@ -2,9 +2,11 @@ extends Control
 
 var pressed
 var direction
+var healWorth
 
 func _ready():
 	pressed = false
+	healWorth = 25
 
 func _process(_delta):
 	if pressed and direction == 'left':
@@ -48,3 +50,10 @@ func _on_buildBuilding_pressed():
 		if(player.money > building.buildingCost):
 			player.loseMoney(building.buildingCost)
 			building.runTimer()
+
+
+func _on_Heal_pressed():
+	var player = get_node("/root/Level/Player")
+	if(player.money > 4):
+		player.setHP(healWorth)
+		player.loseMoney(5)

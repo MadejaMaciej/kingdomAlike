@@ -17,7 +17,7 @@ var hallBuilded
 func _ready():
 	screen_size = get_viewport_rect().size
 	money = 100
-	hp = 100
+	hp = 25
 	maxHealth = 100
 	people = 0
 	maxPeople = 20
@@ -88,7 +88,7 @@ func loseMoney(amount):
 		displayMoney(money)
 
 func setHP(setNum):
-	if(setNum > maxHealth):
+	if(setNum + hp > maxHealth):
 		hp = maxHealth
 		switchHearts(hp)
 	else:

@@ -183,9 +183,24 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="heal" type="Button" parent="."]
+visible = false
+anchor_left = 0.447
+anchor_top = 0.025
+anchor_right = 0.552
+anchor_bottom = 0.092
+margin_left = 0.299988
+margin_right = 0.299988
+margin_bottom = -0.100002
+text = "Heal"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="button_down" from="Left" to="." method="_on_Left_button_down"]
 [connection signal="button_up" from="Left" to="." method="_on_Left_button_up"]
 [connection signal="button_down" from="Right" to="." method="_on_Right_button_down"]
 [connection signal="button_up" from="Right" to="." method="_on_Right_button_up"]
 [connection signal="pressed" from="buyWorker" to="." method="_on_buyWorker_pressed"]
 [connection signal="pressed" from="buildBuilding" to="." method="_on_buildBuilding_pressed"]
+[connection signal="pressed" from="heal" to="." method="_on_Heal_pressed"]
