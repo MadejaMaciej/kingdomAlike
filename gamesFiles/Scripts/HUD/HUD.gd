@@ -3,8 +3,10 @@ extends Control
 var pressed
 var direction
 var healWorth
+var player
 
 func _ready():
+	player = get_node("/root/Level/Player")
 	pressed = false
 	healWorth = 25
 
@@ -39,12 +41,10 @@ func _on_Right_button_up():
 
 
 func _on_buyWorker_pressed():
-	var player = get_node("/root/Level/Player")
 	player.buyWorker()
 
 
 func _on_buildBuilding_pressed():
-	var player = get_node("/root/Level/Player")
 	var building = player.getPlayerBuilding()
 	if(player.money > building.buildingCost):
 		player.loseMoney(building.buildingCost)
@@ -52,7 +52,6 @@ func _on_buildBuilding_pressed():
 
 
 func _on_Heal_pressed():
-	var player = get_node("/root/Level/Player")
 	if(player.money > 4):
 		player.setHP(healWorth)
 		player.loseMoney(5)
@@ -97,3 +96,14 @@ func save_game():
 	save_game.close()
 	var level = "res://Maps/MainMenu.tscn"
 	get_tree().change_scene(level)
+
+
+func _on_BuySword_pressed():
+	if(player.money > 0 and player.population.worker > 0):
+		player.loseMoney(1)
+		player.switchWorkerTo("sword")
+
+func _on_BuyFarmer_pressed():
+	if(player.money  > 0 and player.population.worker > 0):
+		player.loseMoney(1)
+		player.switchWorkerTo("farmers")

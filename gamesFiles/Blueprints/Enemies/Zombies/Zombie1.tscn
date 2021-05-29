@@ -1,14 +1,32 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Blueprints/Enemies/Zombies/Zombie.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/Enemies/Zombie1.gd" type="Script" id=2]
 
+[sub_resource type="CircleShape2D" id=1]
+
 [node name="Zombie1" instance=ExtResource( 1 )]
+collision_layer = 2
+collision_mask = 5
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" parent="." index="0"]
-position = Vector2( -0.27919, -0.0260067 )
-scale = Vector2( 0.330665, 0.232653 )
+position = Vector2( -0.404191, 1.224 )
+scale = Vector2( 0.220009, 0.154611 )
 
 [node name="CollisionShape2D" parent="." index="1"]
-position = Vector2( 0.297302, 0.891907 )
+position = Vector2( -0.452698, 0.391907 )
+
+[node name="Area2D" type="Area2D" parent="." index="2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2( -31.75, -0.75 )
+shape = SubResource( 1 )
+
+[node name="attackCooldown" type="Timer" parent="." index="3"]
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_Area2D_area_exited"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
+[connection signal="timeout" from="attackCooldown" to="." method="_on_attackCooldown_timeout"]

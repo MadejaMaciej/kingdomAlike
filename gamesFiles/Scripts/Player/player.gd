@@ -14,6 +14,12 @@ var collidingBuilding
 var playerBuilding
 var hallBuilded
 
+var defenseBuff
+
+var soliderStrength
+
+var wall
+
 func _ready():
 	screen_size = get_viewport_rect().size
 	money = 100
@@ -21,6 +27,7 @@ func _ready():
 	maxHealth = 100
 	people = 0
 	maxPeople = 20
+	soliderStrength = 10
 	hallBuilded = false
 	population = {
 		"worker": 0,
@@ -33,6 +40,7 @@ func _ready():
 	displayMoney(money)
 	switchHearts(hp)
 	displayPeople(people, maxPeople)
+	defenseBuff = 1
 
 func _physics_process(_delta):
 	var velocity = Vector2.ZERO
@@ -66,7 +74,7 @@ func displayMoney(mon):
 	$CanvasLayer/HUDController/HUD/coinDisplay/Label.text = str(mon)
 
 func die():
-	get_tree().quit()
+	pass
 
 func switchHearts(health):
 	$CanvasLayer/HUDController/HUD/healthDisplay.switchHeartsHud(health)
@@ -146,6 +154,10 @@ func _on_Area2D_area_entered(area):
 	if(area.is_in_group("playerBuilding")):
 		playerBuilding = area
 
+func incraseBuff():
+	defenseBuff += 1
+	wall.updateWallDMG()
+
 func _on_Area2D_area_exited(area):
 	if(area.is_in_group("building")):
 		collidingBuilding = null
@@ -164,7 +176,12 @@ func switcherPop(to):
 		population.pike += 1
 	elif(to == "sword"):
 		population.sword += 1
+		if(wall != null):
+			wall.updateWallDMG()
 	elif(to == "farmers"):
 		population.farmers +=1
 	else:
 		population.engineer += 1
+
+func wallBuilded(wallBuild):
+	wall = wallBuild

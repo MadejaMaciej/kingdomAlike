@@ -6,10 +6,13 @@ var velocity
 var x
 var maxSpeed
 var maxHP
+var player
+var attackStrength
 
 func _ready():
+	player = get_node("/root/Level/Player")
 	velocity = Vector2.ZERO
-	velocity.x = 1
+	velocity.x = -1
 	x = velocity.x
 
 func _physics_process(_delta):
@@ -46,6 +49,15 @@ func getMaxSpeed():
 
 func destroyObject():
 	queue_free()
+
+func setAttack(attack = 5):
+	attackStrength = attack
+
+func attackPlayer():
+	player.tookDmg(attackStrength)
+
+func attackWall():
+	player.wall.getDmg(attackStrength)
 
 func getDamage(dmg):
 	hp -= dmg

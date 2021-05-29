@@ -1,0 +1,127 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Assets/Buildings/Roof_A_02.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Buildings/Pillar_02.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Buildings/Pillar_01.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Buildings/Roof_A_01.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Buildings/Roof_A_03.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Buildings/Wall_A_02.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Buildings/Wall_A_03.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Buildings/Wall_A_01.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Buildings/Door_03.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Buildings/Herbs.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Enviroment/Grass_02.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Enviroment/Grass_01.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Buildings/Fence_03.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Buildings/Fence_02.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Buildings/Fence_01.png" type="Texture" id=15]
+[ext_resource path="res://Scripts/Buildings/FarmLvL2.gd" type="Script" id=16]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 160.144, 73.2115 )
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource( 16 )
+
+[node name="Sprite" type="Sprite" parent="."]
+
+[node name="Pillar_02" type="Sprite" parent="Sprite"]
+position = Vector2( 19.6517, -60.8642 )
+scale = Vector2( 0.592248, 0.378465 )
+texture = ExtResource( 2 )
+
+[node name="Pillar_02" type="Sprite" parent="Sprite/Pillar_02"]
+position = Vector2( -282.858, -7.0423 )
+texture = ExtResource( 2 )
+
+[node name="Wall_A_02" type="Sprite" parent="Sprite"]
+position = Vector2( -64.9438, -69.3738 )
+scale = Vector2( 0.547406, 0.35448 )
+texture = ExtResource( 6 )
+
+[node name="Wall_A_03" type="Sprite" parent="Sprite/Wall_A_02"]
+position = Vector2( 174.047, 0.470596 )
+scale = Vector2( 0.676139, 1 )
+texture = ExtResource( 7 )
+
+[node name="Wall_A_01" type="Sprite" parent="Sprite/Wall_A_02"]
+position = Vector2( -173.132, 0.470566 )
+scale = Vector2( 0.633275, 1 )
+texture = ExtResource( 8 )
+
+[node name="Door_03" type="Sprite" parent="Sprite"]
+position = Vector2( -66.3477, -55.5179 )
+scale = Vector2( 0.369522, 0.301312 )
+texture = ExtResource( 9 )
+
+[node name="Grass_01" type="Sprite" parent="Sprite/Door_03"]
+position = Vector2( 342.3, 123.84 )
+scale = Vector2( 1.36918, 1.45887 )
+texture = ExtResource( 12 )
+
+[node name="Grass_02" type="Sprite" parent="Sprite/Door_03"]
+position = Vector2( 416.375, 132.454 )
+scale = Vector2( 1.14967, 1.09177 )
+texture = ExtResource( 12 )
+
+[node name="Grass_03" type="Sprite" parent="Sprite/Door_03"]
+position = Vector2( 513.439, 116.792 )
+scale = Vector2( 1.38913, 1.77702 )
+texture = ExtResource( 12 )
+
+[node name="Herbs" type="Sprite" parent="Sprite/Door_03"]
+position = Vector2( -1.25581, -60.9807 )
+texture = ExtResource( 10 )
+
+[node name="Grass_03" type="Sprite" parent="Sprite/Door_03/Herbs"]
+position = Vector2( 438.065, 211.447 )
+texture = ExtResource( 11 )
+
+[node name="Grass_04" type="Sprite" parent="Sprite/Door_03/Herbs"]
+position = Vector2( 550.455, 211.447 )
+texture = ExtResource( 11 )
+
+[node name="Grass_02" type="Sprite" parent="Sprite/Door_03/Herbs"]
+position = Vector2( 321.844, 211.447 )
+texture = ExtResource( 11 )
+
+[node name="Pillar_01" type="Sprite" parent="Sprite"]
+position = Vector2( -64.9438, -8.47174 )
+scale = Vector2( 0.592248, 0.478578 )
+texture = ExtResource( 3 )
+
+[node name="Roof_A_02" type="Sprite" parent="Sprite/Pillar_01"]
+position = Vector2( 2.53557, -309.599 )
+scale = Vector2( 0.838004, 1 )
+texture = ExtResource( 1 )
+
+[node name="Roof_A_03" type="Sprite" parent="Sprite/Pillar_01/Roof_A_02"]
+position = Vector2( 205.75, -0.697205 )
+texture = ExtResource( 5 )
+
+[node name="Roof_A_01" type="Sprite" parent="Sprite/Pillar_01/Roof_A_02/Roof_A_03"]
+position = Vector2( -410.156, 3.48648 )
+texture = ExtResource( 4 )
+
+[node name="Fence_01" type="Sprite" parent="Sprite"]
+position = Vector2( 61.5551, -34.0134 )
+scale = Vector2( 0.616551, 0.539124 )
+texture = ExtResource( 15 )
+
+[node name="Fence_02" type="Sprite" parent="Sprite/Fence_01"]
+position = Vector2( 81.1373, -1.31305 )
+texture = ExtResource( 14 )
+
+[node name="Fence_03" type="Sprite" parent="Sprite/Fence_01/Fence_02"]
+position = Vector2( 39.8032, -3.05176e-05 )
+texture = ExtResource( 13 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.33374, -73.0825 )
+shape = SubResource( 1 )
+
+[node name="EarnTime" type="Timer" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_Area2D_body_exited"]
+[connection signal="timeout" from="EarnTime" to="." method="_on_EarnTime_timeout"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=2]
+[gd_scene load_steps=52 format=2]
 
 [ext_resource path="res://Assets/Tileset/jungleTileset.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Tileset/Tile (2).png" type="Texture" id=2]
@@ -9,19 +9,14 @@
 [ext_resource path="res://Blueprints/Enemies/portal.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Blueprints/Player/player.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Assets/Tileset/rock.png" type="Texture" id=9]
-[ext_resource path="res://Assets/Tileset/rock16.png" type="Texture" id=10]
+[ext_resource path="res://Scripts/Enemies/Lose.gd" type="Script" id=10]
 [ext_resource path="res://Assets/Tileset/rock10.png" type="Texture" id=11]
 [ext_resource path="res://Assets/Tileset/rock8.png" type="Texture" id=12]
 [ext_resource path="res://Assets/Backgrounds/Layer_0003_6.png" type="Texture" id=13]
-[ext_resource path="res://Assets/Tileset/rock9.png" type="Texture" id=14]
-[ext_resource path="res://Assets/Tileset/rock3.png" type="Texture" id=15]
 [ext_resource path="res://Assets/Tileset/rock6.png" type="Texture" id=16]
 [ext_resource path="res://Assets/Tileset/rock12.png" type="Texture" id=17]
-[ext_resource path="res://Assets/Tileset/rock15.png" type="Texture" id=18]
 [ext_resource path="res://Assets/Tileset/rock7.png" type="Texture" id=19]
 [ext_resource path="res://Assets/Tileset/rock14.png" type="Texture" id=20]
-[ext_resource path="res://Assets/Tileset/rock17.png" type="Texture" id=21]
-[ext_resource path="res://Assets/Tileset/rock5.png" type="Texture" id=22]
 [ext_resource path="res://Assets/Backgrounds/Layer_0009_2.png" type="Texture" id=23]
 [ext_resource path="res://Assets/Backgrounds/Layer_0005_5.png" type="Texture" id=24]
 [ext_resource path="res://Assets/Backgrounds/Layer_0007_Lights.png" type="Texture" id=25]
@@ -45,7 +40,6 @@
 [ext_resource path="res://Assets/Buildings/Wall_C_02.png" type="Texture" id=43]
 [ext_resource path="res://Assets/Buildings/Wall_C_01.png" type="Texture" id=44]
 [ext_resource path="res://Blueprints/Constructions/SwordConstruction.tscn" type="PackedScene" id=45]
-[ext_resource path="res://Scripts/Buildings/ConstructionBase.gd" type="Script" id=46]
 [ext_resource path="res://Blueprints/Constructions/MainHallConstruction.tscn" type="PackedScene" id=66]
 [ext_resource path="res://Blueprints/Constructions/HomeConstruction.tscn" type="PackedScene" id=67]
 [ext_resource path="res://Blueprints/Constructions/WellConstruction.tscn" type="PackedScene" id=68]
@@ -196,6 +190,9 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 5/z_index = 0
 
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 43.8257, 117.604 )
+
 [node name="Level" type="Node2D"]
 __meta__ = {
 "_edit_horizontal_guides_": [ 399.615 ]
@@ -267,75 +264,6 @@ texture = ExtResource( 9 )
 [node name="Sprite" type="Sprite" parent="Rocks"]
 position = Vector2( 2285, 344 )
 scale = Vector2( 0.226339, 0.290909 )
-texture = ExtResource( 9 )
-
-[node name="Rocks2" type="Node" parent="."]
-
-[node name="Sprite13" type="Sprite" parent="Rocks2"]
-position = Vector2( -18832, 272 )
-scale = Vector2( 0.285533, 0.415224 )
-texture = ExtResource( 17 )
-
-[node name="Sprite12" type="Sprite" parent="Rocks2"]
-position = Vector2( -18793, 170.113 )
-scale = Vector2( 0.295326, 0.500762 )
-texture = ExtResource( 10 )
-
-[node name="Sprite11" type="Sprite" parent="Rocks2"]
-position = Vector2( -18736, 152 )
-scale = Vector2( 0.186403, 0.298822 )
-texture = ExtResource( 14 )
-
-[node name="Sprite10" type="Sprite" parent="Rocks2"]
-position = Vector2( -18789.5, 312.545 )
-scale = Vector2( 0.322768, 0.372896 )
-texture = ExtResource( 18 )
-
-[node name="Sprite9" type="Sprite" parent="Rocks2"]
-position = Vector2( -18740.5, 389.167 )
-rotation = -0.0314159
-scale = Vector2( 0.159366, 0.255521 )
-texture = ExtResource( 17 )
-
-[node name="Sprite8" type="Sprite" parent="Rocks2"]
-position = Vector2( -18920, 264 )
-scale = Vector2( 0.301935, 0.458464 )
-texture = ExtResource( 22 )
-
-[node name="Sprite7" type="Sprite" parent="Rocks2"]
-position = Vector2( -18912, 336 )
-scale = Vector2( 0.285533, 0.415224 )
-texture = ExtResource( 17 )
-
-[node name="Sprite6" type="Sprite" parent="Rocks2"]
-position = Vector2( -19080, 184 )
-scale = Vector2( 0.285533, 0.415224 )
-texture = ExtResource( 20 )
-
-[node name="Sprite5" type="Sprite" parent="Rocks2"]
-position = Vector2( -19048, 280 )
-scale = Vector2( 0.285533, 0.415224 )
-texture = ExtResource( 21 )
-
-[node name="Sprite4" type="Sprite" parent="Rocks2"]
-position = Vector2( -19200, 184 )
-scale = Vector2( 0.285533, 0.415224 )
-texture = ExtResource( 14 )
-
-[node name="Sprite3" type="Sprite" parent="Rocks2"]
-position = Vector2( -19192, 328 )
-scale = Vector2( 0.285533, 0.415224 )
-texture = ExtResource( 15 )
-
-[node name="Sprite" type="Sprite" parent="Rocks2"]
-position = Vector2( -19016, 360 )
-scale = Vector2( 0.145536, 0.227273 )
-texture = ExtResource( 9 )
-
-[node name="Sprite2" type="Sprite" parent="Rocks2"]
-position = Vector2( -19008, 136 )
-rotation = 3.14159
-scale = Vector2( 0.145536, 0.227273 )
 texture = ExtResource( 9 )
 
 [node name="Portal" parent="." instance=ExtResource( 7 )]
@@ -759,12 +687,6 @@ position = Vector2( 1734.52, 363.454 )
 z_index = -99
 texture = ExtResource( 27 )
 
-[node name="TombStone (2)3" type="Sprite" parent="graphicHolder"]
-position = Vector2( -18676.4, 155.984 )
-rotation = 0.760963
-z_index = -99
-texture = ExtResource( 27 )
-
 [node name="TombStone (2)4" type="Sprite" parent="graphicHolder"]
 position = Vector2( 1815.3, 378.362 )
 z_index = -99
@@ -933,17 +855,29 @@ texture = ExtResource( 40 )
 position = Vector2( -3644.58, 403.884 )
 z_index = -2
 
-[node name="Farm" parent="." groups=[
-"farm",
-"playerBuilding",
-] instance=ExtResource( 33 )]
-position = Vector2( -3166.13, 405.132 )
-z_index = -2
-
 [node name="Walls" parent="." groups=[
 "playerBuilding",
 "wall",
 ] instance=ExtResource( 32 )]
-position = Vector2( -2676.73, 404.508 )
+position = Vector2( -2683.08, 401.333 )
 z_index = -2
-script = ExtResource( 46 )
+
+[node name="Farm" parent="." groups=[
+"farm",
+"playerBuilding",
+] instance=ExtResource( 33 )]
+position = Vector2( -3169.23, 403.771 )
+z_index = -2
+
+[node name="spawner" type="Node2D" parent="."]
+position = Vector2( 1735.27, 399.812 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( -2931.87, 396.229 )
+script = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 25.8167, -112.246 )
+shape = SubResource( 8 )
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]

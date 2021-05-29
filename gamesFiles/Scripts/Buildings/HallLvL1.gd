@@ -65,6 +65,7 @@ func hallBuilded():
 		instance.set_global_position(position)
 		instance.add_to_group("lvl2")
 		instance.add_to_group("hallReady")
+		instance.add_to_group("playerBuilding")
 		instance.z_index = -2
 		$".".queue_free()
 

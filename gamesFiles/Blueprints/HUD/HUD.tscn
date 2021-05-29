@@ -218,6 +218,30 @@ position = Vector2( 82.1149, 23.0981 )
 scale = Vector2( 0.0515335, 0.0443243 )
 texture = ExtResource( 8 )
 
+[node name="BuyFarmer" type="Button" parent="."]
+visible = false
+anchor_left = 0.43
+anchor_top = 0.022
+anchor_right = 0.572
+anchor_bottom = 0.089
+margin_left = 0.16629
+margin_top = 0.134771
+margin_right = -0.0337219
+margin_bottom = 0.034771
+text = "Buy Farmer"
+
+[node name="BuySword" type="Button" parent="."]
+visible = false
+anchor_left = 0.43
+anchor_top = 0.022
+anchor_right = 0.572
+anchor_bottom = 0.089
+margin_left = 0.16629
+margin_top = 0.134771
+margin_right = -0.0337219
+margin_bottom = 0.034771
+text = "Buy Solider"
+
 [node name="pause_popup" type="Panel" parent="."]
 visible = false
 anchor_right = 1.005
@@ -259,5 +283,7 @@ __meta__ = {
 [connection signal="pressed" from="buildBuilding" to="." method="_on_buildBuilding_pressed"]
 [connection signal="pressed" from="heal" to="." method="_on_Heal_pressed"]
 [connection signal="pressed" from="Pause" to="." method="_on_Pause_pressed"]
+[connection signal="pressed" from="BuyFarmer" to="." method="_on_BuyFarmer_pressed"]
+[connection signal="pressed" from="BuySword" to="." method="_on_BuySword_pressed"]
 [connection signal="pressed" from="pause_popup/Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="pause_popup/Button2" to="." method="_on_Button2_pressed"]
