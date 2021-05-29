@@ -23,7 +23,7 @@ func _on_Area2D_body_exited(body):
 
 
 func _on_Area2D_body_entered(body):
-	if(body.is_in_group("humanPlayer") and $".".is_in_group("playerBuilding") and !timerRunning and (player.hallBuilded || $".".is_in_group("hall") and player.population.worker > 0)):
+	if(body.is_in_group("humanPlayer") and $".".is_in_group("playerBuilding") and !timerRunning and (player.hallBuilded || $".".is_in_group("hall"))):
 		showUI()
 
 func runTimer():
@@ -64,5 +64,35 @@ func switchBuildings():
 		var instance = well.instance()
 		get_node('/root/Level').add_child(instance)
 		instance.set_global_position(position)
+		instance.z_index = -2
+		$".".queue_free()
+	elif($".".is_in_group("sword")):
+		var sword = preload("res://Blueprints/Sword/SwordLvL1.tscn")
+		var instance = sword.instance()
+		get_node('/root/Level').add_child(instance)
+		instance.set_global_position(position)
+		instance.add_to_group("playerBuilding")
+		instance.add_to_group("lvl1")
+		instance.add_to_group("sword1")
+		instance.z_index = -2
+		$".".queue_free()
+	elif($".".is_in_group("farm")):
+		var farm = preload("res://Blueprints/Farm/FarmLvL1.tscn")
+		var instance = farm.instance()
+		get_node('/root/Level').add_child(instance)
+		instance.set_global_position(position)
+		instance.add_to_group("playerBuilding")
+		instance.add_to_group("lvl1")
+		instance.add_to_group("farm1")
+		instance.z_index = -2
+		$".".queue_free()
+	elif($".".is_in_group("wall")):
+		var wall = preload("res://Blueprints/Wall/WallLvL1.tscn")
+		var instance = wall.instance()
+		get_node('/root/Level').add_child(instance)
+		instance.set_global_position(position)
+		instance.add_to_group("playerBuilding")
+		instance.add_to_group("lvl1")
+		instance.add_to_group("wall1")
 		instance.z_index = -2
 		$".".queue_free()

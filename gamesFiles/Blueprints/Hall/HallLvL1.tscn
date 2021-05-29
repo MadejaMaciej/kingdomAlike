@@ -117,11 +117,11 @@ position = Vector2( 4.93463, -106.293 )
 shape = SubResource( 1 )
 
 [node name="BuildTime" type="Timer" parent="."]
-wait_time = 15.0
+wait_time = 5.0
 one_shot = true
 
 [node name="GenMoney" type="Timer" parent="."]
-wait_time = 20.0
+wait_time = 5.0
 autostart = true
 
 [connection signal="body_entered" from="." to="." method="_on_Area2D_body_entered"]

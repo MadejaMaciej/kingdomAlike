@@ -140,8 +140,9 @@ position = Vector2( 2.02097, -106.02 )
 shape = SubResource( 1 )
 
 [node name="GenMoney" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 5.0
 autostart = true
 
 [connection signal="body_entered" from="." to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_Area2D_body_exited"]
 [connection signal="timeout" from="GenMoney" to="." method="_on_GenMoney_timeout"]

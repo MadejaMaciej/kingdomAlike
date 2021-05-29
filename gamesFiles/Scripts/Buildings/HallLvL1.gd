@@ -6,6 +6,10 @@ var timerRunning
 var buildingCost
 var moneyStored
 var hp
+var maxPopDaily
+var popDaily
+var buttonBuy
+var labelBuy
 
 func _ready():
 	timerRunning = false
@@ -14,12 +18,21 @@ func _ready():
 	buildingCost = 7
 	moneyStored = 0
 	hp = 400
+	maxPopDaily = 5
+	popDaily = 5
+	buttonBuy = get_node("/root/Level/Player/CanvasLayer/HUDController/HUD/buyWorker")
+	labelBuy = get_node("/root/Level/Player/CanvasLayer/HUDController/HUD/BuyWorkerText")
 
 func showUI():
 	buildButton.show()
+	buttonBuy.show()
+	prepareBuyLabel(popDaily)
+	labelBuy.show()
 
 func hideUI():
 	buildButton.hide()
+	buttonBuy.hide()
+	labelBuy.hide()
 
 func _on_Area2D_body_exited(body):
 	if(body.is_in_group("humanPlayer") and $".".is_in_group("playerBuilding")):
@@ -27,7 +40,7 @@ func _on_Area2D_body_exited(body):
 
 
 func _on_Area2D_body_entered(body):
-	if(body.is_in_group("humanPlayer") and $".".is_in_group("playerBuilding") and !timerRunning and (player.hallBuilded || $".".is_in_group("hall") and player.population.worker > 0)):
+	if(body.is_in_group("humanPlayer") and $".".is_in_group("playerBuilding") and !timerRunning and (player.hallBuilded || $".".is_in_group("hall"))):
 		showUI()
 		player.setCoins(moneyStored)
 		moneyStored = 0
@@ -57,4 +70,20 @@ func hallBuilded():
 
 
 func _on_GenMoney_timeout():
-	moneyStored += player.population.worker
+	randomize()
+	popDaily = randi()%maxPopDaily+1
+	prepareBuyLabel(popDaily)
+
+func prepareBuyLabel(p):
+	var text = "People: "
+	text += str(p)
+	labelBuy.text = text
+
+func getPeople():
+	return popDaily
+
+func buyWorker():
+	if(popDaily > 0):
+		popDaily -= 1
+		prepareBuyLabel(popDaily)
+

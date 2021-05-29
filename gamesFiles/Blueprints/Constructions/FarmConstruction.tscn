@@ -1,5 +1,48 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Blueprints/Buildings/ConstructionBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/Buildings/ConstructionBase.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Buildings/Pillar_02.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Buildings/Pillar_03.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Buildings/Pillar_01.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Enviroment/Grass_02.png" type="Texture" id=6]
 
 [node name="Area2D" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="Pillar_03" type="Sprite" parent="Sprite" index="0"]
+position = Vector2( -8.56934, -50.8913 )
+scale = Vector2( 0.646555, 0.758169 )
+texture = ExtResource( 4 )
+
+[node name="Pillar_01" type="Sprite" parent="Sprite" index="1"]
+position = Vector2( -64.8059, -11.1347 )
+scale = Vector2( 0.591923, 0.591204 )
+texture = ExtResource( 5 )
+
+[node name="Pillar_02" type="Sprite" parent="Sprite" index="2"]
+position = Vector2( 21.3741, -67.1177 )
+scale = Vector2( 0.714764, 0.409685 )
+texture = ExtResource( 3 )
+
+[node name="Grass_02" type="Sprite" parent="Sprite" index="3"]
+position = Vector2( 58.6968, -15.816 )
+scale = Vector2( 0.392323, 0.454331 )
+texture = ExtResource( 6 )
+
+[node name="Grass_03" type="Sprite" parent="Sprite" index="4"]
+position = Vector2( 107.113, -15.816 )
+scale = Vector2( 0.392323, 0.454331 )
+texture = ExtResource( 6 )
+
+[node name="Grass_04" type="Sprite" parent="Sprite" index="5"]
+position = Vector2( 157.116, -15.816 )
+scale = Vector2( 0.392323, 0.454331 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2( 10.8147, -98.7116 )
+
+[node name="BuildTime" type="Timer" parent="." index="2"]
+
+[connection signal="timeout" from="BuildTime" to="." method="_on_BuildTime_timeout"]

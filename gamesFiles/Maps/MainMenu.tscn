@@ -76,15 +76,15 @@ z_index = -100
 texture = ExtResource( 14 )
 
 [node name="Ladder_02" type="Sprite" parent="."]
-position = Vector2( 253.31, 129.49 )
+position = Vector2( 253.31, 102.551 )
 rotation = 1.5708
-scale = Vector2( 0.433637, 0.5 )
+scale = Vector2( 0.280574, 0.5 )
 texture = ExtResource( 10 )
 
 [node name="Ladder_03" type="Sprite" parent="."]
-position = Vector2( 343.209, 126.167 )
+position = Vector2( 343.209, 97.2636 )
 rotation = -1.5708
-scale = Vector2( 0.448806, 0.5 )
+scale = Vector2( 0.284582, 0.5 )
 texture = ExtResource( 10 )
 
 [node name="StartGame" type="Button" parent="."]
@@ -121,57 +121,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LoadGame" type="Button" parent="."]
-anchor_left = 0.393
-anchor_top = 0.511
-anchor_right = 0.604
-anchor_bottom = 0.641
-margin_left = 0.993698
-margin_top = -57.8093
-margin_right = 2.39368
-margin_bottom = -57.8093
-rect_pivot_offset = Vector2( -656.732, -156.729 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Layer_0002_8" type="Sprite" parent="."]
-position = Vector2( 301.571, 125.771 )
-scale = Vector2( 0.138756, 0.161368 )
-texture = ExtResource( 9 )
-
-[node name="Label2" type="Label" parent="."]
-anchor_left = 0.397
-anchor_top = 0.289
-anchor_right = 0.604
-anchor_bottom = 0.415
-margin_left = 0.093689
-margin_top = 10.8734
-margin_right = 0.893677
-margin_bottom = 11.0734
-text = "Load Game"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="HowToPlay" type="Button" parent="."]
 anchor_left = 0.393
 anchor_top = 0.511
 anchor_right = 0.604
 anchor_bottom = 0.641
-margin_left = 1.66115
-margin_top = 16.2747
-margin_right = 3.06113
-margin_bottom = 16.2747
+margin_left = 0.538681
+margin_top = -38.1647
+margin_right = 1.93866
+margin_bottom = -38.1647
 rect_pivot_offset = Vector2( -259.599, -91.768 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Layer_0002_10" type="Sprite" parent="."]
-position = Vector2( 302.358, 198.726 )
+position = Vector2( 301.236, 144.287 )
 scale = Vector2( 0.138756, 0.161368 )
 texture = ExtResource( 9 )
 
@@ -180,10 +145,10 @@ anchor_left = 0.396
 anchor_top = 0.743
 anchor_right = 0.604
 anchor_bottom = 0.87
-margin_left = 2.25583
-margin_top = -52.712
-margin_right = 2.45584
-margin_bottom = -52.812
+margin_left = 1.13336
+margin_top = -107.151
+margin_right = 1.33337
+margin_bottom = -107.251
 text = "How To Play"
 align = 1
 valign = 1

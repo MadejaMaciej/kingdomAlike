@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assets/Movement/left.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Movement/right.png" type="Texture" id=2]
@@ -7,8 +7,10 @@
 [ext_resource path="res://Assets/HUD/heart.png" type="Texture" id=5]
 [ext_resource path="res://Scripts/HUD/healthDisplay.gd" type="Script" id=6]
 [ext_resource path="res://Assets/HUD/people.png" type="Texture" id=7]
+[ext_resource path="res://Assets/HUD/pause.png" type="Texture" id=8]
 
 [node name="HUD" type="Control"]
+pause_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 3 )
@@ -171,14 +173,14 @@ __meta__ = {
 
 [node name="buildBuilding" type="Button" parent="."]
 visible = false
-anchor_left = 0.447
-anchor_top = 0.025
+anchor_left = 0.445
+anchor_top = 0.142
 anchor_right = 0.552
-anchor_bottom = 0.092
-margin_left = 0.299988
-margin_right = 0.299988
-margin_bottom = -0.100002
-text = "Building"
+anchor_bottom = 0.208
+margin_top = -0.100002
+margin_right = -0.199982
+margin_bottom = 0.0999985
+text = "Build"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -197,6 +199,58 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Pause" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.121
+anchor_top = 0.036
+anchor_right = 0.156
+anchor_bottom = 0.112
+margin_left = -0.197388
+margin_top = -0.132581
+margin_right = -0.19738
+margin_bottom = 0.0674171
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="pause" type="Sprite" parent="."]
+position = Vector2( 82.1149, 23.0981 )
+scale = Vector2( 0.0515335, 0.0443243 )
+texture = ExtResource( 8 )
+
+[node name="pause_popup" type="Panel" parent="."]
+visible = false
+anchor_right = 1.005
+anchor_bottom = 1.0
+
+[node name="Button" type="Button" parent="pause_popup"]
+anchor_left = 0.419
+anchor_top = 0.305
+anchor_right = 0.589
+anchor_bottom = 0.403
+margin_left = 0.342987
+margin_top = -0.5
+margin_right = -0.167023
+margin_bottom = 0.0999908
+text = "Resume"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="pause_popup"]
+anchor_left = 0.419
+anchor_top = 0.53
+anchor_right = 0.587
+anchor_bottom = 0.633
+margin_left = 0.342987
+margin_top = -1.52588e-05
+margin_right = 0.0390015
+margin_bottom = 0.0999908
+text = "Main Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="button_down" from="Left" to="." method="_on_Left_button_down"]
 [connection signal="button_up" from="Left" to="." method="_on_Left_button_up"]
 [connection signal="button_down" from="Right" to="." method="_on_Right_button_down"]
@@ -204,3 +258,6 @@ __meta__ = {
 [connection signal="pressed" from="buyWorker" to="." method="_on_buyWorker_pressed"]
 [connection signal="pressed" from="buildBuilding" to="." method="_on_buildBuilding_pressed"]
 [connection signal="pressed" from="heal" to="." method="_on_Heal_pressed"]
+[connection signal="pressed" from="Pause" to="." method="_on_Pause_pressed"]
+[connection signal="pressed" from="pause_popup/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="pause_popup/Button2" to="." method="_on_Button2_pressed"]

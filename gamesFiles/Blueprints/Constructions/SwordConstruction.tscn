@@ -1,5 +1,39 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Blueprints/Buildings/ConstructionBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Buildings/Ladder_02.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Buildings/Decor_Shield.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Buildings/Decor_Cuirass.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Buildings/Decor_Sword.png" type="Texture" id=5]
+[ext_resource path="res://Scripts/Buildings/ConstructionBase.gd" type="Script" id=6]
 
 [node name="Area2D" instance=ExtResource( 1 )]
+script = ExtResource( 6 )
+
+[node name="Ladder_02" type="Sprite" parent="Sprite" index="0"]
+position = Vector2( 7, -15.75 )
+scale = Vector2( 0.917614, 0.445313 )
+texture = ExtResource( 2 )
+
+[node name="Decor_Sword" type="Sprite" parent="Sprite" index="1"]
+position = Vector2( -90.25, -21.75 )
+rotation = 1.39626
+scale = Vector2( 0.383446, 0.310799 )
+texture = ExtResource( 5 )
+
+[node name="Decor_Cuirass" type="Sprite" parent="Sprite" index="2"]
+position = Vector2( -108.5, -29 )
+scale = Vector2( 0.289063, 0.226563 )
+texture = ExtResource( 4 )
+
+[node name="Decor_Shield" type="Sprite" parent="Sprite" index="3"]
+position = Vector2( -122, -27.75 )
+scale = Vector2( 0.289063, 0.222656 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2( 5, -98.5 )
+
+[node name="BuildTime" type="Timer" parent="." index="2"]
+
+[connection signal="timeout" from="BuildTime" to="." method="_on_BuildTime_timeout"]

@@ -17,7 +17,7 @@ var hallBuilded
 func _ready():
 	screen_size = get_viewport_rect().size
 	money = 100
-	hp = 25
+	hp = 100
 	maxHealth = 100
 	people = 0
 	maxPeople = 20
@@ -27,7 +27,8 @@ func _ready():
 		"archer": 0,
 		"pike": 0,
 		"sword": 0,
-		"engineer": 0
+		"engineer": 0,
+		"farmers": 0
 	}
 	displayMoney(money)
 	switchHearts(hp)
@@ -114,13 +115,13 @@ func heal(amount):
 		switchHearts(hp)
 
 func buyWorker():
-	if(people + 1 <= maxPeople and money - 1 >= 0 and collidingBuilding.getPeople() > 0):
+	if(people + 1 <= maxPeople and money - 1 >= 0 and playerBuilding.getPeople() > 0):
 		money -= 1
 		people += 1
 		population.worker += 1
 		displayPeople(people, maxPeople)
 		displayMoney(money)
-		collidingBuilding.buyWorker()
+		playerBuilding.buyWorker()
 
 func loseWorker(type):
 	if(people - 1 >= 0 and population[type] - 1 >= 0):
@@ -163,5 +164,7 @@ func switcherPop(to):
 		population.pike += 1
 	elif(to == "sword"):
 		population.sword += 1
+	elif(to == "farmers"):
+		population.farmers +=1
 	else:
 		population.engineer += 1

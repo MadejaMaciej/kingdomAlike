@@ -25,7 +25,7 @@ func _on_Area2D_body_exited(body):
 
 
 func _on_Area2D_body_entered(body):
-	if(body.is_in_group("humanPlayer") and $".".is_in_group("playerBuilding") and !timerRunning and (player.hallBuilded || $".".is_in_group("hall") and player.population.worker > 0)):
+	if(body.is_in_group("humanPlayer") and $".".is_in_group("playerBuilding") and !timerRunning and (player.hallBuilded || $".".is_in_group("hall"))):
 		showUI()
 
 func runTimer():
