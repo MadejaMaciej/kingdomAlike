@@ -44,7 +44,7 @@ func _on_BuildTime_timeout():
 
 func homeBuilded():
 	if($".".is_in_group("farm1")):
-		var farm = preload("res://Blueprints/Farm/FarmLvL2.tscn")
+		var farm = load("res://Blueprints/Farm/FarmLvL2.tscn")
 		var instance = farm.instance()
 		get_node('/root/Level').add_child(instance)
 		instance.set_global_position(position)

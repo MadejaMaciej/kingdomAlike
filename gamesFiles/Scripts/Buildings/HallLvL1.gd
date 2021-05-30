@@ -59,7 +59,7 @@ func _on_BuildTime_timeout():
 
 func hallBuilded():
 	if($".".is_in_group("hall")):
-		var home = preload("res://Blueprints/Hall/HallLvL2.tscn")
+		var home = load("res://Blueprints/Hall/HallLvL2.tscn")
 		var instance = home.instance()
 		get_node('/root/Level').add_child(instance)
 		instance.set_global_position(position)

@@ -43,7 +43,7 @@ func _on_BuildTime_timeout():
 
 func homeBuilded():
 	if($".".is_in_group("sword1")):
-		var sword = preload("res://Blueprints/Sword/SwordLvL2.tscn")
+		var sword = load("res://Blueprints/Sword/SwordLvL2.tscn")
 		var instance = sword.instance()
 		get_node('/root/Level').add_child(instance)
 		instance.set_global_position(position)

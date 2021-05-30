@@ -41,7 +41,7 @@ func _on_BuildTime_timeout():
 func homeBuilded():
 	if($".".is_in_group("home")):
 		player.buildedHouse()
-		var home = preload("res://Blueprints/Homes/HomeLvL2.tscn")
+		var home = load("res://Blueprints/Homes/HomeLvL2.tscn")
 		var instance = home.instance()
 		get_node('/root/Level').add_child(instance)
 		instance.set_global_position(position)
