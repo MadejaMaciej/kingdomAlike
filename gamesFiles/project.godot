@@ -40,3 +40,21 @@ left={
 "deadzone": 0.5,
 "events": [  ]
 }
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+quality/intended_usage/framebuffer_allocation=0
+quality/intended_usage/framebuffer_allocation.mobile=1
+vram_compression/import_etc=true
+vram_compression/import_etc2=false
+quality/reflections/texture_array_reflections=false
+quality/reflections/high_quality_ggx=false
+quality/shading/force_vertex_shading.mobile=false
+quality/shading/force_lambert_over_burley.mobile=false
+quality/shading/force_blinn_over_ggx.mobile=false
+quality/depth_prepass/enable=false
+quality/skinning/software_skinning_fallback=false
+quality/spatial_partitioning/use_bvh=false
+quality/lightmapping/use_bicubic_sampling=false
+quality/subsurface_scattering/weight_samples=false
