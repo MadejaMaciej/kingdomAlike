@@ -20,8 +20,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
 __meta__ = {
+"_edit_horizontal_guides_": [ 158.516 ],
 "_edit_use_anchors_": false,
-"_edit_vertical_guides_": [ -272.083, 300.431, 236.214, 364.054 ]
+"_edit_vertical_guides_": [ -272.083, 300.431, 236.214, 364.054, 19.1032, 535.414 ]
 }
 
 [node name="Background" type="Node" parent="."]
@@ -67,6 +68,7 @@ texture = ExtResource( 5 )
 [node name="CivilHousing" type="Sprite" parent="Background"]
 position = Vector2( 98.9036, 213.396 )
 scale = Vector2( 0.497291, 0.568463 )
+z_index = -2
 texture = ExtResource( 13 )
 
 [node name="tentRight" type="Sprite" parent="Background"]
@@ -75,45 +77,139 @@ scale = Vector2( 0.490883, 0.462599 )
 z_index = -100
 texture = ExtResource( 14 )
 
-[node name="Ladder_02" type="Sprite" parent="."]
+[node name="Tile (2)" type="Sprite" parent="Background"]
+position = Vector2( 15.0793, 301.489 )
+texture = ExtResource( 11 )
+
+[node name="Tile (2)2" type="Sprite" parent="Background"]
+position = Vector2( 43.5471, 301.489 )
+texture = ExtResource( 11 )
+
+[node name="Tile (2)3" type="Sprite" parent="Background"]
+position = Vector2( 75.4936, 301.489 )
+texture = ExtResource( 11 )
+
+[node name="Tile (2)4" type="Sprite" parent="Background"]
+position = Vector2( 107.043, 301.489 )
+texture = ExtResource( 11 )
+
+[node name="Tile (2)5" type="Sprite" parent="Background"]
+position = Vector2( 138.196, 301.762 )
+texture = ExtResource( 11 )
+
+[node name="Tile (2)6" type="Sprite" parent="Background"]
+position = Vector2( 169.42, 302.119 )
+texture = ExtResource( 11 )
+
+[node name="Tile (2)7" type="Sprite" parent="Background"]
+position = Vector2( 197.887, 302.119 )
+texture = ExtResource( 11 )
+
+[node name="Tile (2)8" type="Sprite" parent="Background"]
+position = Vector2( 229.834, 302.119 )
+texture = ExtResource( 11 )
+
+[node name="Tile (2)9" type="Sprite" parent="Background"]
+position = Vector2( 261.383, 302.119 )
+texture = ExtResource( 11 )
+
+[node name="Tile (2)10" type="Sprite" parent="Background"]
+position = Vector2( 292.536, 301.92 )
+texture = ExtResource( 11 )
+
+[node name="Tile (2)11" type="Sprite" parent="Background"]
+position = Vector2( 324.281, 301.95 )
+texture = ExtResource( 11 )
+
+[node name="Tile (2)12" type="Sprite" parent="Background"]
+position = Vector2( 352.749, 301.95 )
+texture = ExtResource( 11 )
+
+[node name="Tile (2)13" type="Sprite" parent="Background"]
+position = Vector2( 384.696, 301.95 )
+texture = ExtResource( 11 )
+
+[node name="Tile (2)14" type="Sprite" parent="Background"]
+position = Vector2( 416.245, 301.95 )
+texture = ExtResource( 11 )
+
+[node name="Tile (2)15" type="Sprite" parent="Background"]
+position = Vector2( 447.083, 301.909 )
+texture = ExtResource( 11 )
+
+[node name="Tile (2)16" type="Sprite" parent="Background"]
+position = Vector2( 478.727, 301.845 )
+texture = ExtResource( 11 )
+
+[node name="Tile (2)17" type="Sprite" parent="Background"]
+position = Vector2( 507.195, 301.845 )
+texture = ExtResource( 11 )
+
+[node name="Tile (2)18" type="Sprite" parent="Background"]
+position = Vector2( 539.141, 301.845 )
+texture = ExtResource( 11 )
+
+[node name="Tile (2)19" type="Sprite" parent="Background"]
+position = Vector2( 570.691, 301.845 )
+texture = ExtResource( 11 )
+
+[node name="Tile (2)20" type="Sprite" parent="Background"]
+position = Vector2( 601.843, 302.118 )
+texture = ExtResource( 11 )
+
+[node name="Basket" type="Sprite" parent="Background"]
+position = Vector2( 485.099, 264.251 )
+scale = Vector2( 0.35439, 0.333697 )
+texture = ExtResource( 12 )
+
+[node name="MenuElements" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.003
+margin_bottom = 0.100006
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ladder_02" type="Sprite" parent="MenuElements"]
 position = Vector2( 253.31, 102.551 )
 rotation = 1.5708
 scale = Vector2( 0.280574, 0.5 )
 texture = ExtResource( 10 )
 
-[node name="Ladder_03" type="Sprite" parent="."]
+[node name="Ladder_03" type="Sprite" parent="MenuElements"]
 position = Vector2( 343.209, 97.2636 )
 rotation = -1.5708
 scale = Vector2( 0.284582, 0.5 )
 texture = ExtResource( 10 )
 
-[node name="StartGame" type="Button" parent="."]
+[node name="StartGame" type="Button" parent="MenuElements"]
 modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.396
 anchor_top = 0.07
 anchor_right = 0.607
 anchor_bottom = 0.204
 margin_left = -0.128067
-margin_top = 0.0627823
+margin_top = -0.00721741
 margin_right = 0.183868
-margin_bottom = -0.0372467
+margin_bottom = -0.107246
 rect_pivot_offset = Vector2( -656.732, -156.729 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Layer_0002_7" type="Sprite" parent="."]
+[node name="Layer_0002_7" type="Sprite" parent="MenuElements"]
 position = Vector2( 300.777, 51.2974 )
 scale = Vector2( 0.138756, 0.161368 )
 texture = ExtResource( 9 )
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="MenuElements"]
 anchor_left = 0.397
 anchor_top = 0.073
 anchor_right = 0.605
 anchor_bottom = 0.2
 margin_left = -0.200012
-margin_top = 0.0999985
+margin_top = 0.0269985
+margin_bottom = -0.0730019
 text = "Start Game"
 align = 1
 valign = 1
@@ -121,34 +217,34 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HowToPlay" type="Button" parent="."]
+[node name="HowToPlay" type="Button" parent="MenuElements"]
 anchor_left = 0.393
 anchor_top = 0.511
 anchor_right = 0.604
 anchor_bottom = 0.641
 margin_left = 0.538681
-margin_top = -38.1647
+margin_top = -38.6757
 margin_right = 1.93866
-margin_bottom = -38.1647
+margin_bottom = -38.6757
 rect_pivot_offset = Vector2( -259.599, -91.768 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Layer_0002_10" type="Sprite" parent="."]
+[node name="Layer_0002_10" type="Sprite" parent="MenuElements"]
 position = Vector2( 301.236, 144.287 )
 scale = Vector2( 0.138756, 0.161368 )
 texture = ExtResource( 9 )
 
-[node name="Label4" type="Label" parent="."]
+[node name="Label4" type="Label" parent="MenuElements"]
 anchor_left = 0.396
 anchor_top = 0.743
 anchor_right = 0.604
 anchor_bottom = 0.87
 margin_left = 1.13336
-margin_top = -107.151
+margin_top = -107.894
 margin_right = 1.33337
-margin_bottom = -107.251
+margin_bottom = -107.994
 text = "How To Play"
 align = 1
 valign = 1
@@ -156,110 +252,281 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="QuitGame" type="Button" parent="."]
+[node name="QuitGame" type="Button" parent="MenuElements"]
 modulate = Color( 1, 1, 1, 0 )
-anchor_left = 0.393
-anchor_top = 0.76
-anchor_right = 0.607
-anchor_bottom = 0.89
-margin_left = 313.623
-margin_top = -217.0
-margin_right = 213.223
-margin_bottom = -232.0
+anchor_left = 0.916
+anchor_top = 0.037
+anchor_right = 0.962
+anchor_bottom = 0.117
+margin_left = -0.177063
+margin_top = -0.137
+margin_right = 0.2229
+margin_bottom = -0.0870132
 rect_pivot_offset = Vector2( -656.732, -156.729 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Sprite" type="Sprite" parent="MenuElements"]
 position = Vector2( 563.08, 22.6915 )
 scale = Vector2( 0.35759, 0.307024 )
 texture = ExtResource( 8 )
 
-[node name="Tile (2)" type="Sprite" parent="."]
-position = Vector2( 15.0793, 301.489 )
-texture = ExtResource( 11 )
+[node name="Slides" type="Control" parent="."]
+visible = false
+anchor_right = 1.005
+anchor_bottom = 1.0
+margin_bottom = 2.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Tile (2)2" type="Sprite" parent="."]
-position = Vector2( 43.5471, 301.489 )
-texture = ExtResource( 11 )
+[node name="MainMenuBack" type="Button" parent="Slides"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.911
+anchor_top = 0.036
+anchor_right = 0.959
+anchor_bottom = 0.117
+margin_left = 0.0899048
+margin_top = 0.127999
+margin_right = -0.212036
+margin_bottom = -0.0740089
+rect_pivot_offset = Vector2( -656.732, -156.729 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Tile (2)3" type="Sprite" parent="."]
-position = Vector2( 75.4936, 301.489 )
-texture = ExtResource( 11 )
+[node name="Sprite2" type="Sprite" parent="Slides"]
+position = Vector2( 563.08, 22.6915 )
+scale = Vector2( 0.35759, 0.307024 )
+texture = ExtResource( 8 )
 
-[node name="Tile (2)4" type="Sprite" parent="."]
-position = Vector2( 107.043, 301.489 )
-texture = ExtResource( 11 )
+[node name="s1" type="Control" parent="Slides"]
+anchor_left = 0.033
+anchor_top = 0.046
+anchor_right = 0.886
+anchor_bottom = 0.523
+margin_left = 0.101
+margin_top = 0.107999
+margin_right = -0.257996
+margin_bottom = 0.0540009
 
-[node name="Tile (2)5" type="Sprite" parent="."]
-position = Vector2( 138.196, 301.762 )
-texture = ExtResource( 11 )
+[node name="RichTextLabel" type="Label" parent="Slides/s1"]
+anchor_left = 0.037
+anchor_top = 0.035
+anchor_right = 0.965
+anchor_bottom = 0.66
+margin_left = -0.0179996
+margin_top = -0.04
+margin_right = -0.0100098
+margin_bottom = -0.0400009
+text = "Hello wanderer! Welcome in quick text - tutorial about the rules 
+of the game.
+This is the game about survival the multiple waves of zombies
+each stronger than previous just by building. Remember that you
+will not fight here with them!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Tile (2)6" type="Sprite" parent="."]
-position = Vector2( 169.42, 302.119 )
-texture = ExtResource( 11 )
+[node name="Next2" type="Button" parent="Slides/s1"]
+anchor_left = 0.793
+anchor_top = 0.712
+anchor_right = 0.943
+anchor_bottom = 0.921
+margin_left = 0.232758
+margin_top = 0.0613632
+margin_right = -6.86722
+margin_bottom = -0.0346527
+text = "Next slide"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Tile (2)7" type="Sprite" parent="."]
-position = Vector2( 197.887, 302.119 )
-texture = ExtResource( 11 )
+[node name="s2" type="Control" parent="Slides"]
+visible = false
+anchor_left = 0.033
+anchor_top = 0.046
+anchor_right = 0.886
+anchor_bottom = 0.523
+margin_left = 0.101
+margin_top = 0.107999
+margin_right = -0.257996
+margin_bottom = 130.054
 
-[node name="Tile (2)8" type="Sprite" parent="."]
-position = Vector2( 229.834, 302.119 )
-texture = ExtResource( 11 )
+[node name="RichTextLabel2" type="Label" parent="Slides/s2"]
+anchor_left = 0.015
+anchor_top = -0.015
+anchor_right = 1.018
+anchor_bottom = 0.905
+margin_left = 0.289999
+margin_top = 0.11
+margin_right = -0.252014
+margin_bottom = 0.0299988
+text = "Currently we have 6 different buildings in game. Every in ruins so you
+need to rebuild them quick! From the left it will be:
+Hall (you need to build it first as it let's you build other buildings and recruit 
+population, after each 45 seconds you will have next recruits, higher level, 
+more of them), well (you can spend some money there to heal but watch out, 
+you can heal even if you have full hp and it WILL waste your hard worked money)
+Next two buildings on the map are homes, each level increases max
+population. Next are swords which gives buffs to your wall (wall starts to 
+deal damage to zombies when you buy one, in other case it is just blockade that
+soon will be breached, more soliders more damage to zombies). Next one is 
+farm. It let's you recruit the farmers which earns you money each 90 seconds. 
+For each farmer you are given 1 coin on first level and 2 coins on second level 
+which gives you this quicker. Last one is wall. Initial each building costs 1 coin and
+to upgrade this to second level it costs 10 coins so watch the prices 
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Tile (2)9" type="Sprite" parent="."]
-position = Vector2( 261.383, 302.119 )
-texture = ExtResource( 11 )
+[node name="Prev1" type="Button" parent="Slides/s2"]
+anchor_left = 0.512
+anchor_top = 0.853
+anchor_right = 0.662
+anchor_bottom = 0.969
+margin_left = 0.23703
+margin_top = -0.127747
+margin_right = 0.136993
+margin_bottom = 0.0882568
+text = "Prev slide"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Tile (2)10" type="Sprite" parent="."]
-position = Vector2( 292.536, 301.92 )
-texture = ExtResource( 11 )
+[node name="Next3" type="Button" parent="Slides/s2"]
+anchor_left = 0.687
+anchor_top = 0.852
+anchor_right = 0.837
+anchor_bottom = 0.972
+margin_left = 0.178497
+margin_top = -0.0714569
+margin_right = 0.0784912
+margin_bottom = 0.0485535
+text = "Next slide"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Tile (2)11" type="Sprite" parent="."]
-position = Vector2( 324.281, 301.95 )
-texture = ExtResource( 11 )
+[node name="s3" type="Control" parent="Slides"]
+visible = false
+anchor_left = 0.033
+anchor_top = 0.046
+anchor_right = 0.886
+anchor_bottom = 0.523
+margin_left = 0.101
+margin_top = 0.107999
+margin_right = -0.257996
+margin_bottom = 0.0540009
 
-[node name="Tile (2)12" type="Sprite" parent="."]
-position = Vector2( 352.749, 301.95 )
-texture = ExtResource( 11 )
+[node name="RichTextLabel3" type="Label" parent="Slides/s3"]
+anchor_left = 0.037
+anchor_top = 0.035
+anchor_right = 0.965
+anchor_bottom = 0.66
+margin_left = -0.0179996
+margin_top = -0.04
+margin_right = -0.0100098
+margin_bottom = -0.0400009
+text = "You will win only if you survive 10 waves of zombies!
+If you die - you lose as your villagers do not have an governor and if
+the wall is breached you lose as well as your villagers do not have 
+defenders and will be soon obliterated"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Tile (2)13" type="Sprite" parent="."]
-position = Vector2( 384.696, 301.95 )
-texture = ExtResource( 11 )
+[node name="Prev2" type="Button" parent="Slides/s3"]
+anchor_left = 0.555
+anchor_top = 0.722
+anchor_right = 0.704
+anchor_bottom = 0.93
+margin_left = -0.240448
+margin_top = -0.043808
+margin_right = 0.173523
+margin_bottom = 0.00418091
+text = "Prev slide"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Tile (2)14" type="Sprite" parent="."]
-position = Vector2( 416.245, 301.95 )
-texture = ExtResource( 11 )
+[node name="Next4" type="Button" parent="Slides/s3"]
+anchor_left = 0.793
+anchor_top = 0.712
+anchor_right = 0.943
+anchor_bottom = 0.921
+margin_left = 0.232758
+margin_top = 0.0613632
+margin_right = -6.86722
+margin_bottom = -0.0346527
+text = "Next slide"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Tile (2)15" type="Sprite" parent="."]
-position = Vector2( 447.083, 301.909 )
-texture = ExtResource( 11 )
+[node name="s4" type="Control" parent="Slides"]
+visible = false
+anchor_left = 0.033
+anchor_top = 0.046
+anchor_right = 0.886
+anchor_bottom = 0.523
+margin_left = 0.101
+margin_top = 0.107999
+margin_right = -0.257996
+margin_bottom = 107.054
 
-[node name="Tile (2)16" type="Sprite" parent="."]
-position = Vector2( 478.727, 301.845 )
-texture = ExtResource( 11 )
+[node name="RichTextLabel4" type="Label" parent="Slides/s4"]
+anchor_left = 0.037
+anchor_top = 0.035
+anchor_right = 0.994
+anchor_bottom = 0.66
+margin_left = -0.0179996
+margin_top = 0.215
+margin_right = 0.0839844
+margin_bottom = 24.34
+text = "Quick tips:
+- Build Hall at first and buy some people - it will let you to build other 
+buildings
+- Build Swords thing (fifth from left) and buy in the begging at least one sword
+to defend
+- Build farm (sixth from left) and buy some farmers to give you income.
+Remember more farmers more income
+- You must build wall before first wave which will come after 90 seconds!
+Oh! I almost forget that thanks to population you buy in hall, you can recruit
+farmers and swords. So for example if you buy 5 population at the begining
+you can buy only f.e 2 swords and 3 farmers if you have enough money.
+Each sword and farmer costs 1 coin as well "
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Tile (2)17" type="Sprite" parent="."]
-position = Vector2( 507.195, 301.845 )
-texture = ExtResource( 11 )
+[node name="Prev3" type="Button" parent="Slides/s4"]
+anchor_left = 0.554
+anchor_top = 0.871
+anchor_right = 0.704
+anchor_bottom = 1.0
+margin_left = 0.243988
+margin_top = -0.0922089
+margin_right = 0.143982
+margin_bottom = 1.52881
+text = "Prev slide"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="Tile (2)18" type="Sprite" parent="."]
-position = Vector2( 539.141, 301.845 )
-texture = ExtResource( 11 )
-
-[node name="Tile (2)19" type="Sprite" parent="."]
-position = Vector2( 570.691, 301.845 )
-texture = ExtResource( 11 )
-
-[node name="Tile (2)20" type="Sprite" parent="."]
-position = Vector2( 601.843, 302.118 )
-texture = ExtResource( 11 )
-
-[node name="Basket" type="Sprite" parent="."]
-position = Vector2( 485.099, 264.251 )
-scale = Vector2( 0.35439, 0.333697 )
-texture = ExtResource( 12 )
-
-[connection signal="pressed" from="StartGame" to="." method="_on_StartGame_pressed"]
-[connection signal="pressed" from="QuitGame" to="." method="_on_QuitGame_pressed"]
+[connection signal="pressed" from="MenuElements/StartGame" to="." method="_on_StartGame_pressed"]
+[connection signal="pressed" from="MenuElements/HowToPlay" to="." method="_on_HowToPlay_pressed"]
+[connection signal="pressed" from="MenuElements/QuitGame" to="." method="_on_QuitGame_pressed"]
+[connection signal="pressed" from="Slides/MainMenuBack" to="." method="_on_MainMenuBack_pressed"]
+[connection signal="pressed" from="Slides/s1/Next2" to="." method="_on_Next2_pressed"]
+[connection signal="pressed" from="Slides/s2/Prev1" to="." method="_on_Prev1_pressed"]
+[connection signal="pressed" from="Slides/s2/Next3" to="." method="_on_Next3_pressed"]
+[connection signal="pressed" from="Slides/s3/Prev2" to="." method="_on_Prev2_pressed"]
+[connection signal="pressed" from="Slides/s3/Next4" to="." method="_on_Next4_pressed"]
+[connection signal="pressed" from="Slides/s4/Prev3" to="." method="_on_Prev3_pressed"]
