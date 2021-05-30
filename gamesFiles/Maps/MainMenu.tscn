@@ -520,6 +520,21 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Loading" type="Control" parent="."]
+visible = false
+anchor_right = 1.002
+anchor_bottom = 1.003
+margin_right = -0.200073
+margin_bottom = 0.100006
+
+[node name="Label" type="Label" parent="Loading"]
+anchor_right = 0.997
+anchor_bottom = 1.0
+margin_right = -0.197021
+text = "LOADING"
+align = 1
+valign = 1
+
 [connection signal="pressed" from="MenuElements/StartGame" to="." method="_on_StartGame_pressed"]
 [connection signal="pressed" from="MenuElements/HowToPlay" to="." method="_on_HowToPlay_pressed"]
 [connection signal="pressed" from="MenuElements/QuitGame" to="." method="_on_QuitGame_pressed"]
