@@ -13,6 +13,7 @@
 [ext_resource path="res://Assets/Tileset/rock10.png" type="Texture" id=11]
 [ext_resource path="res://Assets/Tileset/rock8.png" type="Texture" id=12]
 [ext_resource path="res://Assets/Backgrounds/Layer_0003_6.png" type="Texture" id=13]
+[ext_resource path="res://Blueprints/Wall/WallLvl1.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Assets/Tileset/rock6.png" type="Texture" id=16]
 [ext_resource path="res://Assets/Tileset/rock12.png" type="Texture" id=17]
 [ext_resource path="res://Assets/Tileset/rock7.png" type="Texture" id=19]
@@ -26,7 +27,6 @@
 [ext_resource path="res://Assets/Enviroment/Rock_02.png" type="Texture" id=29]
 [ext_resource path="res://Assets/Backgrounds/Layer_0008_3.png" type="Texture" id=30]
 [ext_resource path="res://Assets/Backgrounds/Layer_0006_4.png" type="Texture" id=31]
-[ext_resource path="res://Blueprints/Constructions/WallsConstruction.tscn" type="PackedScene" id=32]
 [ext_resource path="res://Blueprints/Constructions/FarmConstruction.tscn" type="PackedScene" id=33]
 [ext_resource path="res://Assets/Enviroment/Grass_01.png" type="Texture" id=34]
 [ext_resource path="res://Assets/Enviroment/Grass_02.png" type="Texture" id=35]
@@ -855,13 +855,6 @@ texture = ExtResource( 40 )
 position = Vector2( -3644.58, 403.884 )
 z_index = -2
 
-[node name="Walls" parent="." groups=[
-"playerBuilding",
-"wall",
-] instance=ExtResource( 32 )]
-position = Vector2( -2683.08, 401.333 )
-z_index = -2
-
 [node name="Farm" parent="." groups=[
 "farm",
 "playerBuilding",
@@ -879,5 +872,13 @@ script = ExtResource( 10 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 25.8167, -112.246 )
 shape = SubResource( 8 )
+
+[node name="Wall" parent="." groups=[
+"lvl1",
+"playerBuilding",
+"wall1",
+] instance=ExtResource( 14 )]
+position = Vector2( -2680.04, 402.804 )
+z_index = -2
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
