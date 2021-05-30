@@ -3,12 +3,14 @@ extends Timer
 var wave
 var waves
 var timer
+var player
 
 func _ready():
 	wave = 0
 	waves = 10
 	timer = self
 	timer.connect("timeout", timer, "startWave")
+	player = get_node("/root/Level/Player")
 
 func startWave():
 	wave = wave + 1
@@ -16,5 +18,4 @@ func startWave():
 		win()
 
 func win():
-	print("Won")
-	pass
+	player.won()

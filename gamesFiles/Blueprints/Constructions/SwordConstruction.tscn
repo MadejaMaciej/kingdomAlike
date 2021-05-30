@@ -35,5 +35,6 @@ texture = ExtResource( 3 )
 position = Vector2( 5, -98.5 )
 
 [node name="BuildTime" type="Timer" parent="." index="2"]
+wait_time = 10.0
 
 [connection signal="timeout" from="BuildTime" to="." method="_on_BuildTime_timeout"]

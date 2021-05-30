@@ -8,20 +8,7 @@ var maxSpeed
 var maxHP
 var player
 var attackStrength
-
-func _ready():
-	player = get_node("/root/Level/Player")
-	velocity = Vector2.ZERO
-	velocity.x = -1
-	x = velocity.x
-
-func _physics_process(_delta):
-	velocity = x * speed
-	velocity = move_and_slide(Vector2(velocity, 0))
-	if x < 0:
-		$AnimatedSprite.play("Run_left")
-	else:
-		$AnimatedSprite.play("Run_right")
+var hit
 
 func setSpeed(sp = 200):
 	speed = sp
@@ -48,6 +35,12 @@ func getMaxSpeed():
 	return maxSpeed
 
 func destroyObject():
+	$attackCooldown.stop()
+	$AnimatedSprite.play("Die")
+	yield( get_node("AnimatedSprite"), "animation_finished" )
+	free()
+
+func free():
 	queue_free()
 
 func setAttack(attack = 5):

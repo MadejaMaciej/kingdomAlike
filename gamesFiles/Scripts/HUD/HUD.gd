@@ -46,7 +46,7 @@ func _on_buyWorker_pressed():
 
 func _on_buildBuilding_pressed():
 	var building = player.getPlayerBuilding()
-	if(player.money > building.buildingCost):
+	if(player.money >= building.buildingCost):
 		player.loseMoney(building.buildingCost)
 		building.runTimer()
 

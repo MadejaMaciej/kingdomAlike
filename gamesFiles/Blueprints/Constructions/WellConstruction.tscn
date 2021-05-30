@@ -44,7 +44,7 @@ scale = Vector2( 0.209781, 0.164492 )
 texture = ExtResource( 2 )
 
 [node name="BuildTime" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 15.0
 one_shot = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

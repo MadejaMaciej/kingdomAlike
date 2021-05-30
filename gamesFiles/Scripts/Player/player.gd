@@ -22,7 +22,7 @@ var wall
 
 func _ready():
 	screen_size = get_viewport_rect().size
-	money = 100
+	money = 20
 	hp = 100
 	maxHealth = 100
 	people = 0
@@ -74,7 +74,8 @@ func displayMoney(mon):
 	$CanvasLayer/HUDController/HUD/coinDisplay/Label.text = str(mon)
 
 func die():
-	pass
+	get_tree().paused = true
+	$CanvasLayer/HUDController/HUD/endDied.show()
 
 func switchHearts(health):
 	$CanvasLayer/HUDController/HUD/healthDisplay.switchHeartsHud(health)
@@ -185,3 +186,11 @@ func switcherPop(to):
 
 func wallBuilded(wallBuild):
 	wall = wallBuild
+
+func won():
+	get_tree().paused = true
+	$CanvasLayer/HUDController/HUD/won.show()
+
+func lose():
+	get_tree().paused = true
+	$CanvasLayer/HUDController/HUD/endWallBreached.show()

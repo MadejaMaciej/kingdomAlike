@@ -30,7 +30,7 @@ position = Vector2( -0.794586, -38.5609 )
 shape = SubResource( 1 )
 
 [node name="BuildTime" type="Timer" parent="." index="3"]
-wait_time = 5.0
+wait_time = 10.0
 one_shot = true
 
 [connection signal="timeout" from="BuildTime" to="." method="_on_BuildTime_timeout"]

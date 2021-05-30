@@ -1,8 +1,14 @@
 extends Area2D
 
-func _on_Area2D_body_entered(body):
-	if(body.is_in_group("zombie")):
-		lose()
+var player
 
-func lose():
-	print("You have lost")
+func _ready():
+	player = get_node("/root/Level/Player")
+
+func _on_Area2D_body_entered(body):
+	player = get_node("/root/Level/Player")
+	if(body.is_in_group("zombie")):
+		lost()
+
+func lost():
+	player.lose()

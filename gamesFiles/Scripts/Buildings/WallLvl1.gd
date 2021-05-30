@@ -12,7 +12,7 @@ func _ready():
 	buildButton = get_node("/root/Level/Player/CanvasLayer/HUDController/HUD/buildBuilding")
 	player = get_node("/root/Level/Player")
 	buildingCost = 10
-	hp = 50
+	hp = 500
 	player.wallBuilded(self)
 	wallDmg = 10
 	updateWallDMG()

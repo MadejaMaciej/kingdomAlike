@@ -14,7 +14,7 @@ wait_time = 0.1
 script = ExtResource( 2 )
 
 [node name="Wave" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 90.0
 autostart = true
 script = ExtResource( 3 )
 

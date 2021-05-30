@@ -275,6 +275,103 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="won" type="Panel" parent="."]
+visible = false
+anchor_right = 1.005
+anchor_bottom = 1.0
+
+[node name="Button2" type="Button" parent="won"]
+anchor_left = 0.419
+anchor_top = 0.53
+anchor_right = 0.587
+anchor_bottom = 0.633
+margin_left = 0.342987
+margin_top = -1.52588e-05
+margin_right = 0.0390015
+margin_bottom = 0.0999908
+text = "Main Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="won"]
+margin_left = 140.0
+margin_top = 31.0
+margin_right = 462.0
+margin_bottom = 48.0
+text = "CONGRATULATIONS!"
+align = 1
+
+[node name="Label2" type="Label" parent="won"]
+margin_left = 133.143
+margin_top = 96.8369
+margin_right = 467.143
+margin_bottom = 115.837
+text = "You have managed to outlive the zombies this time!"
+align = 1
+
+[node name="endWallBreached" type="Panel" parent="."]
+visible = false
+anchor_right = 1.005
+anchor_bottom = 1.0
+
+[node name="Button2" type="Button" parent="endWallBreached"]
+anchor_left = 0.419
+anchor_top = 0.53
+anchor_right = 0.587
+anchor_bottom = 0.633
+margin_left = 0.342987
+margin_top = -1.52588e-05
+margin_right = 0.0390015
+margin_bottom = 0.0999908
+text = "Main Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="endWallBreached"]
+margin_left = 119.112
+margin_top = 81.1225
+margin_right = 482.112
+margin_bottom = 112.122
+text = "The zombies breached your walls. Your villages has died.
+Will you take a revenge?"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="endDied" type="Panel" parent="."]
+visible = false
+anchor_right = 1.005
+anchor_bottom = 1.0
+
+[node name="Button2" type="Button" parent="endDied"]
+anchor_left = 0.419
+anchor_top = 0.53
+anchor_right = 0.587
+anchor_bottom = 0.633
+margin_left = 0.342987
+margin_top = -1.52588e-05
+margin_right = 0.0390015
+margin_bottom = 0.0999908
+text = "Main Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="endDied"]
+margin_left = 119.112
+margin_top = 81.1225
+margin_right = 482.112
+margin_bottom = 112.122
+text = "The walls has not been breached yet but it is a matter
+of time. Maybe wandering alone is not a good idea?"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="button_down" from="Left" to="." method="_on_Left_button_down"]
 [connection signal="button_up" from="Left" to="." method="_on_Left_button_up"]
 [connection signal="button_down" from="Right" to="." method="_on_Right_button_down"]
@@ -287,3 +384,6 @@ __meta__ = {
 [connection signal="pressed" from="BuySword" to="." method="_on_BuySword_pressed"]
 [connection signal="pressed" from="pause_popup/Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="pause_popup/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="won/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="endWallBreached/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="endDied/Button2" to="." method="_on_Button2_pressed"]

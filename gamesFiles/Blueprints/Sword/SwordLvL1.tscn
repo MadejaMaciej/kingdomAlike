@@ -72,6 +72,7 @@ position = Vector2( 0, -74 )
 shape = SubResource( 1 )
 
 [node name="BuildTime" type="Timer" parent="."]
+wait_time = 20.0
 
 [connection signal="body_entered" from="." to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_Area2D_body_exited"]

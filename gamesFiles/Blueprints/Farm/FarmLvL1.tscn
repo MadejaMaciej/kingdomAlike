@@ -105,10 +105,10 @@ position = Vector2( 0.33374, -73.0825 )
 shape = SubResource( 1 )
 
 [node name="BuildTime" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 15.0
 
 [node name="EarnTime" type="Timer" parent="."]
-wait_time = 180.0
+wait_time = 90.0
 autostart = true
 
 [connection signal="body_entered" from="." to="." method="_on_Area2D_body_entered"]
