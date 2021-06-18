@@ -177,10 +177,14 @@ func switcherPop(to):
 		population.pike += 1
 	elif(to == "sword"):
 		population.sword += 1
+		var txt = str(population.sword)
+		$CanvasLayer/HUDController/HUD/swordsss.text = str(txt)
 		if(wall != null):
 			wall.updateWallDMG()
 	elif(to == "farmers"):
 		population.farmers +=1
+		var txt = str(population.farmers)
+		$CanvasLayer/HUDController/HUD/farm.text = str(txt)
 	else:
 		population.engineer += 1
 

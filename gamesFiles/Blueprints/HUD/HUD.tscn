@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Assets/Movement/left.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Movement/right.png" type="Texture" id=2]
@@ -8,11 +8,15 @@
 [ext_resource path="res://Scripts/HUD/healthDisplay.gd" type="Script" id=6]
 [ext_resource path="res://Assets/HUD/people.png" type="Texture" id=7]
 [ext_resource path="res://Assets/HUD/pause.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Buildings/Herbs.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Buildings/Decor_Sword.png" type="Texture" id=10]
 
 [node name="HUD" type="Control"]
 pause_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = -0.561218
+margin_right = -0.561218
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_horizontal_guides_": [ 140.646 ],
@@ -144,6 +148,91 @@ margin_top = 0.0113449
 margin_bottom = 0.0113449
 align = 2
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Decor_Sword" type="Sprite" parent="."]
+position = Vector2( 509.359, 73.5117 )
+scale = Vector2( 0.206386, 0.197616 )
+texture = ExtResource( 10 )
+
+[node name="Decor_Sword2" type="Sprite" parent="."]
+position = Vector2( 510.201, 48.8176 )
+scale = Vector2( 0.160347, 0.166924 )
+texture = ExtResource( 9 )
+
+[node name="farm" type="Label" parent="."]
+anchor_left = 0.734
+anchor_top = 0.107
+anchor_right = 0.808
+anchor_bottom = 0.153
+margin_left = 0.599976
+margin_top = -0.100002
+margin_right = 0.199982
+margin_bottom = 0.0999947
+text = "0"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="swordsss" type="Label" parent="."]
+anchor_left = 0.742
+anchor_top = 0.217
+anchor_right = 0.808
+anchor_bottom = 0.264
+margin_left = -0.143799
+margin_top = 0.0027771
+margin_right = 0.256195
+margin_bottom = -0.0972137
+text = "0"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ZombiesLeft" type="Label" parent="."]
+anchor_left = 0.015
+anchor_top = 0.214
+anchor_right = 0.275
+anchor_bottom = 0.261
+margin_left = 0.122467
+margin_top = 0.0344772
+margin_right = 1.12247
+margin_bottom = -0.0655212
+text = "Zombies left in wave: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ZombiesLeft2" type="Label" parent="."]
+anchor_left = 0.015
+anchor_top = 0.291
+anchor_right = 0.275
+anchor_bottom = 0.337
+margin_left = 0.122467
+margin_top = -0.0550842
+margin_right = 1.12247
+margin_bottom = 0.144913
+text = "Wave: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NextWave" type="Label" parent="."]
+anchor_left = 0.014
+anchor_top = 0.139
+anchor_right = 0.283
+anchor_bottom = 0.186
+margin_left = 0.161218
+margin_top = 0.0852661
+margin_right = 0.7612
+margin_bottom = -0.0147324
+text = "Seconds to next wave: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="buyWorker" type="Button" parent="."]
 visible = false

@@ -35,6 +35,7 @@ func getMaxSpeed():
 	return maxSpeed
 
 func destroyObject():
+	get_node("/root/Level/Portal/Timer").killZombie()
 	$attackCooldown.stop()
 	$AnimatedSprite.play("Die")
 	yield( get_node("AnimatedSprite"), "animation_finished" )
